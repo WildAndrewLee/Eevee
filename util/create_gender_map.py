@@ -1,4 +1,4 @@
-with open('data/processed/growth_rates.csv') as f:
+with open('data/processed/gender.csv') as f:
 	pokemon = []
 
 	# Skip header

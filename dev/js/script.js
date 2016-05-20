@@ -1,22 +1,3 @@
-function Pokemon(id){
-    this.id = id;
-
-    // 0 index the ID.
-    id--;
-
-    this.name = POKEMON[id];
-    this.valid_moves = MOVE_MAP[id];
-    this.valid_abilities = ABILITY_MAP[id];
-
-    this.level = 1;
-    this.exp = 0;
-
-    this.move1 = null;
-    this.move2 = null;
-    this.move3 = null;
-    this.move4 = null;
-}
-
 $(function(){
     var dragonite = 149;
 

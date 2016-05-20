@@ -12,16 +12,20 @@ module.exports = function(grunt) {
 			everything: {
 				files: {
 					'static/js/data.min.js': [
-                        'dev/js/abilities.js',
-                        'dev/js/natures.js',
-                        'dev/js/pokemon.js',
-                        'dev/js/moves.js',
-                        'dev/js/items.js',
-                        'dev/js/exp.js',
-                        'dev/js/data.js'
+                        'dev/js/data/abilities.js',
+                        'dev/js/data/natures.js',
+                        'dev/js/data/pokemon.js',
+                        'dev/js/data/moves.js',
+                        'dev/js/data/items.js',
+                        'dev/js/data/exp.js',
+                        'dev/js/data/growth.js',
+                        'dev/js/data/forms.js',
+                        'dev/js/data/gender.js',
+                        'dev/js/data/data.js'
                     ],
                     'static/js/eevee.min.js': [
                         'dev/js/field.js',
+                        'dev/js/pokemon.js',
                         'dev/js/script.js'
                     ]
 				}
