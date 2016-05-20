@@ -1,6 +1,12 @@
 $(function(){
-    var dragonite = 149;
+    // Dragonite
+    new Pokemon(149);
+    // Unown
+    // new Pokemon(201);
+    // Dewgong
+    // new Pokemon(87);
 
+    /*
     var $name = Field({
         label: 'Pokémon Name',
         value: 'Dragonite'
@@ -139,4 +145,5 @@ $(function(){
             .append($pokerus1.render())
             .append($pokerus2.render())
     );
+    */
 });

@@ -11,11 +11,12 @@ function FieldTemplate(options){
 
 FieldTemplate.prototype.addValidator = function(fn){
     this._validators.push(fn);
+    return this;
 };
 
 FieldTemplate.prototype.isValid = function(){
     for(var n = 0; n < this._validators.length; n++){
-        if(!this._validators[n](this.value)){
+        if(!this._validators[n].call(this, this.value)){
             return false;
         }
     }
@@ -24,7 +25,23 @@ FieldTemplate.prototype.isValid = function(){
 };
 
 FieldTemplate.prototype.change = function(fn){
-    $(this.field).change(fn);
+    var that = this;
+
+    $(this.field).change(function(){
+        fn.call(that, ($(this).val()));
+    });
+    
+    return this;
+};
+
+FieldTemplate.prototype.val = function(v){
+    if(v !== undefined){
+        $(this.field).val(v);
+        return this;
+    }
+    else{
+        return $(this.field).val();
+    }
 };
 
 FieldTemplate.prototype.render = function(){
@@ -52,7 +69,9 @@ TextField.prototype.render = function(){
         that.value = $(this).val();
     });
 
-    return FieldTemplate.prototype.render.call(this).append(this.field);
+    return FieldTemplate.prototype.render.call(this)
+        .append(this.field)
+        .wrap('<div class="input-wrapper"></div>').parent();
 };
 
 function SelectField(options){
@@ -80,7 +99,9 @@ SelectField.prototype.render = function(){
 
     this.field.val(this.value);
 
-    return FieldTemplate.prototype.render.call(this).append(this.field);
+    return FieldTemplate.prototype.render.call(this)
+        .append(this.field)
+        .wrap('<div class="input-wrapper"></div>').parent();
 };
 
 function NumberField(options){
@@ -92,7 +113,12 @@ function NumberField(options){
     this.placeholder = options.placeholder || this.min;
 
     this.addValidator(function(val){
-        return that.min <= val && val <= that.max;
+        return this.min <= val && val <= this.max;
+    });
+
+    this.change(function(v){
+        if(v > this.max) $(this.field).val(this.max);
+        else if(v < this.min) $(this.field).val(this.min);
     });
 }
 
@@ -112,7 +138,9 @@ NumberField.prototype.render = function(){
         that.value = $(this).val();
     });
 
-    return FieldTemplate.prototype.render.call(this).append(this.field);
+    return FieldTemplate.prototype.render.call(this)
+        .append(this.field)
+        .wrap('<div class="input-wrapper"></div>').parent();
 };
 
 function CheckField(options){
@@ -136,10 +164,12 @@ CheckField.prototype.render = function(){
 
     return FieldTemplate.prototype.render.call(this).append(
         $('<div>').addClass('check-group').append(this.field)
-    );
+    ).wrap('<div class="input-wrapper"></div>').parent();
 };
 
 function Field(options){
+    if(!options) options = {};
+
     var factory = {
         type: 'text'
     };

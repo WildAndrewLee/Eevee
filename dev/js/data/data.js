@@ -22,12 +22,8 @@ var ORIGIN = [
     [15, 'Colosseum/XD']
 ];
 
-/* Sort all data arrays */
+/* Sort data arrays */
 NATURES.sort(function(a, b){
-    return a[1].localeCompare(b[1]);
-});
-
-ABILITIES.sort(function(a, b){
     return a[1].localeCompare(b[1]);
 });
 
