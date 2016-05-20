@@ -192,13 +192,9 @@ function Pokemon(id){
         max: 100,
         value: this.level
     }).change(function(v){
-        console.log(v);
         that.level = v;
-        console.log('derp ' + v);
         that.exp = get_exp_for_level(id, v);
-        console.log('exp needed: ' + that.exp);
         that.$exp.val(that.exp);
-        console.log('wtf');
     });
 
     this.$exp = Field({
