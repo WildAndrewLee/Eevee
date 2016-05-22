@@ -289,7 +289,10 @@ Pokemon.prototype.render = function(){
         ).append(
             $('<span>').addClass('misc-button').text('Misc')
         ).append(
-            $('<span>').addClass('choose-again-button').text('Start Over')
+            $('<span>').addClass('choose-again-button').text('Start Over').click(function(){
+                that.$editor.remove();
+                $('#thumbnails').show();
+            })
         ).append(
             $('<span>').addClass('save-button').text('Save')
         )

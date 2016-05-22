@@ -1,5 +1,5 @@
 html, body {
-    font-family: "Helvetica Neue", "Helvetica", arial, sans;
+    font-family: "PT Sans", "Helvetica Neue", "Helvetica", arial, sans;
     font-size: 14px;
 }
 
@@ -25,6 +25,60 @@ figure {
 
 input[type=radio] {
     vertical-align: middle;
+}
+
+#progress {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: 0.1s width;
+    width: 0%;
+    height: 2px;
+    background: #3088f0;
+    box-shadow: 0px 0px 10px #3088f0;
+}
+
+#loading {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 2em;
+    background: #ffffff;
+    text-align: center;
+}
+
+#loading span {
+    display: block;
+    font-family: "Press Start 2p";
+}
+
+#thumbnails {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#thumbnails:after {
+    content: "";
+    flex: auto;
+}
+
+#thumbnails figure {
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+#thumbnails img {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 0.5em;
+    cursor: pointer;
 }
 
 /* Typing Style */
