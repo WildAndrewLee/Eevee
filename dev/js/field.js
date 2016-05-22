@@ -16,7 +16,7 @@ FieldTemplate.prototype.addValidator = function(fn){
 
 FieldTemplate.prototype.isValid = function(){
     for(var n = 0; n < this._validators.length; n++){
-        if(!this._validators[n].call(this, this.value)){
+        if(!this._validators[n].call(this, this.val())){
             return false;
         }
     }
@@ -30,17 +30,18 @@ FieldTemplate.prototype.change = function(fn){
     $(this.field).change(function(){
         fn.call(that, ($(this).val()));
     });
-    
+
     return this;
 };
 
 FieldTemplate.prototype.val = function(v){
     if(v !== undefined){
+        this.value = v;
         $(this.field).val(v);
         return this;
     }
     else{
-        return $(this.field).val();
+        return this.value;
     }
 };
 
@@ -117,8 +118,8 @@ function NumberField(options){
     });
 
     this.change(function(v){
-        if(v > this.max) $(this.field).val(this.max);
-        else if(v < this.min) $(this.field).val(this.min);
+        if(v > this.max) this.val(this.max);
+        else if(v < this.min) this.val(this.min);
     });
 }
 

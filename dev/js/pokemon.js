@@ -81,16 +81,16 @@ Pokemon.prototype.exp_for_level = function(lvl){
     return this.exp_curve[lvl - 1];
 };
 
+/*
+We do not need to check out of bounds levels
+because the level field is a number field.
+ */
 Pokemon.prototype.level_from_exp = function(exp){
-    if(exp < 0) return 1;
-    
     for(var n = 0; n < this.exp_curve.length; n++){
         if(this.exp_curve[n] > exp){
             return n;
         }
     }
-
-    return 100;
 };
 
 Pokemon.prototype.is_genderless = function(){
