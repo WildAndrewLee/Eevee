@@ -58,15 +58,11 @@ function TextField(options){
 TextField.prototype = new FieldTemplate();
 
 TextField.prototype.render = function(){
-    var that = this;
-
     this.field.attr({
         type: 'text',
         disabled: this.disabled,
         placeholder: this.placeholder,
         value: this.value
-    }).change(function(){
-        that.value = $(this).val();
     });
 
     return FieldTemplate.prototype.render.call(this)
@@ -87,8 +83,6 @@ SelectField.prototype.render = function(){
 
     this.field.attr({
         disabled: this.disabled
-    }).change(function(){
-        that.value = $(this).val();
     });
 
     this.options.forEach(function(v){
@@ -125,8 +119,6 @@ function NumberField(options){
 NumberField.prototype = new FieldTemplate();
 
 NumberField.prototype.render = function(){
-    var that = this;
-
     this.field.attr({
         type: 'number',
         min: this.min,
@@ -134,8 +126,6 @@ NumberField.prototype.render = function(){
         placeholder: this.placeholder,
         value: this.value,
         disabled: this.disabled
-    }).change(function(){
-        that.value = $(this).val();
     });
 
     return FieldTemplate.prototype.render.call(this)
@@ -156,14 +146,10 @@ function CheckField(options){
 CheckField.prototype = new FieldTemplate();
 
 CheckField.prototype.render = function(){
-    var that = this;
-
     this.field.attr({
         type: 'checkbox',
         checked: this.checked,
         disabled: this.disabled
-    }).change(function(){
-        that.checked = this.checked;
     });
 
     return FieldTemplate.prototype.render.call(this).append(
