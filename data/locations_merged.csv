@@ -1,0 +1,1940 @@
+location_id,local_language_id,name,location_id,generation_id,game_index
+1,5,Joliberges,1,4,7
+1,9,Canalave City,1,4,7
+2,5,Vestigion,2,4,9
+2,9,Eterna City,2,4,9
+3,5,Verchamps,3,4,11
+3,9,Pastoria City,3,4,11
+4,5,Rivamar,4,4,13
+4,9,Sunyshore City,4,4,13
+5,5,Ligue Pokémon,5,4,15
+5,9,Pokémon League,5,4,15
+6,5,Mine Charbourg,6,4,46
+6,9,Oreburgh Mine,6,4,46
+7,5,Les Eoliennes,7,4,47
+7,9,Valley Windworks,7,4,47
+8,5,Forêt Vestigion,8,4,48
+8,9,Eterna Forest,8,4,48
+9,5,Forge Fuego,9,4,49
+9,9,Fuego Ironworks,9,4,49
+10,5,Mont Couronné,10,4,50
+10,9,Mt. Coronet,10,4,50
+11,5,Grand Marais,11,4,52
+11,9,Great Marsh,11,4,52
+12,5,Ruines Bonville,12,4,53
+12,9,Solaceon Ruins,12,4,53
+13,5,Route Victoire,13,4,54
+13,9,Victory Road,13,4,54
+14,5,Chemin Rocheux,14,4,57
+14,9,Ravaged Path,14,4,57
+15,5,Entrée Charbourg,15,4,59
+15,9,Oreburgh Gate,15,4,59
+16,5,Mont Abrupt,16,4,84
+16,9,Stark Mountain,16,4,84
+17,5,Chemin Source,17,4,75
+17,9,Spring Path,17,4,75
+18,5,Grotte Retour,18,4,62
+18,9,Turnback Cave,18,4,62
+19,5,Temple Frimapic,19,4,64
+19,9,Snowpoint Temple,19,4,64
+20,5,Grotte Revèche,20,4,65
+20,9,Wayward Cave,20,4,65
+22,5,Grotte Ruinem.,22,4,66
+22,9,Ruin Maniac Cave,22,4,66
+23,5,Jardin Trophée,23,4,68
+23,9,Trophy Garden,23,4,68
+24,5,Ile de Fer,24,4,69
+24,9,Iron Island,24,4,69
+25,5,Vieux Château,25,4,70
+25,9,Old Chateau,25,4,70
+26,5,Lac Vérité,26,4,76
+26,9,Lake Verity,26,4,76
+27,5,Lac Courage,27,4,77
+27,9,Lake Valor,27,4,77
+28,5,Lac Savoir,28,4,78
+28,9,Lake Acuity,28,4,78
+29,5,Rive Lac Courage,29,4,73
+29,9,Valor Lakefront,29,4,73
+30,5,Rive Lac Savoir,30,4,74
+30,9,Acuity Lakefront,30,4,74
+31,5,Route 201,31,4,16
+31,9,Route 201,31,4,16
+32,5,Route 202,32,4,17
+32,9,Route 202,32,4,17
+33,5,Route 203,33,4,18
+33,9,Route 203,33,4,18
+34,5,Route 204,34,4,19
+34,9,Route 204,34,4,19
+35,5,Route 205,35,4,20
+35,9,Route 205,35,4,20
+36,5,Route 206,36,4,21
+36,9,Route 206,36,4,21
+37,5,Route 207,37,4,22
+37,9,Route 207,37,4,22
+38,5,Route 208,38,4,23
+38,9,Route 208,38,4,23
+39,5,Route 209,39,4,24
+39,9,Route 209,39,4,24
+41,5,Route 210,41,4,25
+41,9,Route 210,41,4,25
+42,5,Route 211,42,4,26
+42,9,Route 211,42,4,26
+43,5,Route 212,43,4,27
+43,9,Route 212,43,4,27
+44,5,Route 213,44,4,28
+44,9,Route 213,44,4,28
+45,5,Route 214,45,4,29
+45,9,Route 214,45,4,29
+46,5,Route 215,46,4,30
+46,9,Route 215,46,4,30
+47,5,Route 216,47,4,31
+47,9,Route 216,47,4,31
+48,5,Route 217,48,4,32
+48,9,Route 217,48,4,32
+49,5,Route 218,49,4,33
+49,9,Route 218,49,4,33
+50,5,Route 219,50,4,34
+50,9,Route 219,50,4,34
+51,5,Route 221,51,4,36
+51,9,Route 221,51,4,36
+52,5,Route 222,52,4,37
+52,9,Route 222,52,4,37
+53,5,Route 224,53,4,39
+53,9,Route 224,53,4,39
+54,5,Route 225,54,4,40
+54,9,Route 225,54,4,40
+55,5,Route 227,55,4,42
+55,9,Route 227,55,4,42
+56,5,Route 228,56,4,43
+56,9,Route 228,56,4,43
+57,5,Route 229,57,4,44
+57,9,Route 229,57,4,44
+58,5,Bonaugure,58,4,1
+58,9,Twinleaf Town,58,4,1
+59,5,Célestia,59,4,5
+59,9,Celestic Town,59,4,5
+60,5,Aire de Détente,60,4,83
+60,9,Resort Area,60,4,83
+61,5,Chenal 220,61,4,35
+61,9,Sea Route 220,61,4,35
+62,5,Chenal 223,62,4,38
+62,9,Sea Route 223,62,4,38
+63,5,Chenal 226,63,4,41
+63,9,Sea Route 226,63,4,41
+64,5,Chenal 230,64,4,45
+64,9,Sea Route 230,64,4,45
+65,5,Ebènelle,65,4,136
+65,9,Blackthorn City,65,4,136
+66,5,Tour Cendrée,66,4,206
+66,9,Burned Tower,66,4,206
+67,5,Céladopole,67,4,144
+67,9,Celadon City,67,4,144
+68,5,Azuria,68,4,141
+68,9,Cerulean City,68,4,141
+69,5,Ville Griotte,69,4,127
+69,9,Cherrygrove City,69,4,127
+70,5,Irisia,70,4,130
+70,9,Cianwood City,70,4,130
+71,5,Cramois'Ile,71,4,146
+71,9,Cinnabar Island,71,4,146
+72,5,Antre Noir,72,4,220
+72,9,Dark Cave,72,4,220
+73,5,Cave TAUPIQUEUR,73,4,197
+73,9,Diglett's Cave,73,4,197
+74,5,Antre du Dragon,74,4,222
+74,9,Dragon's Den,74,4,222
+75,5,Rosalia,75,4,133
+75,9,Ecruteak City,75,4,133
+76,5,Parmanie,76,4,145
+76,9,Fuchsia City,76,4,145
+77,5,Route de Glace,77,4,217
+77,9,Ice Path,77,4,217
+78,5,Bois aux Chênes,78,4,214
+78,9,Ilex Forest,78,4,214
+79,5,Lac Colère,79,4,135
+79,9,Lake of Rage,79,4,135
+80,5,Mont Sélénite,80,4,198
+80,9,Mt. Moon,80,4,198
+81,5,Mont Creuset,81,4,216
+81,9,Mt. Mortar,81,4,216
+82,5,Mont Argenté,82,4,137
+82,9,Mt. Silver,82,4,137
+83,5,Parc Naturel,83,4,207
+83,9,National Park,83,4,207
+84,5,Bourg Geon,84,4,126
+84,9,New Bark Town,84,4,126
+85,5,Oliville,85,4,132
+85,9,Olivine City,85,4,132
+86,5,Bourg Palette,86,4,138
+86,9,Pallet Town,86,4,138
+87,5,Grotte,87,4,200
+87,9,Rock Tunnel,87,4,200
+88,5,Route 1,88,4,149
+88,9,Route 1,88,4,149
+89,5,Route 10,89,4,158
+89,9,Route 10,89,4,158
+90,5,Route 11,90,4,159
+90,9,Route 11,90,4,159
+91,5,Route 12,91,4,160
+91,9,Route 12,91,4,160
+92,5,Route 13,92,4,161
+92,9,Route 13,92,4,161
+93,5,Route 14,93,4,162
+93,9,Route 14,93,4,162
+94,5,Route 15,94,4,163
+94,9,Route 15,94,4,163
+95,5,Route 16,95,4,164
+95,9,Route 16,95,4,164
+96,5,Route 17,96,4,165
+96,9,Route 17,96,4,165
+97,5,Route 18,97,4,166
+97,9,Route 18,97,4,166
+98,5,Chenal 19,98,4,167
+98,9,Sea Route 19,98,4,167
+99,5,Route 2,99,4,150
+99,9,Route 2,99,4,150
+100,5,Chenal 20,100,4,168
+100,9,Sea Route 20,100,4,168
+101,5,Chenal 21,101,4,169
+101,9,Sea Route 21,101,4,169
+102,5,Route 22,102,4,170
+102,9,Route 22,102,4,170
+103,5,Route 24,103,4,172
+103,9,Route 24,103,4,172
+104,5,Rotue 25,104,4,173
+104,9,Route 25,104,4,173
+105,5,Route 26,105,4,174
+105,9,Route 26,105,4,174
+106,5,Route 27,106,4,175
+106,9,Route 27,106,4,175
+107,5,Route 28,107,4,176
+107,9,Route 28,107,4,176
+108,5,Route 29,108,4,177
+108,9,Route 29,108,4,177
+109,5,Route 3,109,4,151
+109,9,Route 3,109,4,151
+110,5,Route 30,110,4,178
+110,9,Route 30,110,4,178
+111,5,Route 31,111,4,179
+111,9,Route 31,111,4,179
+112,5,Route 32,112,4,180
+112,9,Route 32,112,4,180
+113,5,Route 33,113,4,181
+113,9,Route 33,113,4,181
+114,5,Route 34,114,4,182
+114,9,Route 34,114,4,182
+115,5,Route 35,115,4,183
+115,9,Route 35,115,4,183
+116,5,Route 36,116,4,184
+116,9,Route 36,116,4,184
+117,5,Route 37,117,4,185
+117,9,Route 37,117,4,185
+118,5,Route 38,118,4,186
+118,9,Route 38,118,4,186
+119,5,Route 39,119,4,187
+119,9,Route 39,119,4,187
+120,5,Route 4,120,4,152
+120,9,Route 4,120,4,152
+121,5,Chenal 40,121,4,188
+121,9,Sea Route 40,121,4,188
+122,5,Chenal 41,122,4,189
+122,9,Sea Route 41,122,4,189
+123,5,Route 42,123,4,190
+123,9,Route 42,123,4,190
+124,5,Route 43,124,4,191
+124,9,Route 43,124,4,191
+125,5,Route 44,125,4,192
+125,9,Route 44,125,4,192
+126,5,Route 45,126,4,193
+126,9,Route 45,126,4,193
+127,5,Route 46,127,4,194
+127,9,Route 46,127,4,194
+128,5,Route 47,128,4,195
+128,9,Route 47,128,4,195
+129,5,Route 48,129,4,196
+129,9,Route 48,129,4,196
+130,5,Route 5,130,4,153
+130,9,Route 5,130,4,153
+131,5,Route 6,131,4,154
+131,9,Route 6,131,4,154
+132,5,Route 7,132,4,155
+132,9,Route 7,132,4,155
+133,5,Route 8,133,4,156
+133,9,Route 8,133,4,156
+134,5,Route 9,134,4,157
+134,9,Route 9,134,4,157
+135,5,Ruines d'Alpha,135,4,209
+135,9,Ruins of Alph,135,4,209
+136,5,Iles Ecume,136,4,203
+136,9,Seafoam Islands,136,4,203
+137,5,Puits RAMOLOSS,137,4,211
+137,9,Slowpoke Well,137,4,211
+138,5,Tour CHETIFLOR,138,4,204
+138,9,Sprout Tower,138,4,204
+139,5,Tour Carillon,139,4,205
+139,9,Bell Tower,139,4,205
+140,5,Chutes Tohjo,140,4,223
+140,9,Tohjo Falls,140,4,223
+141,5,Caves Jumelles,141,4,210
+141,9,Union Cave,141,4,210
+147,5,Caverne Azurée,147,4,199
+147,9,Cerulean Cave,147,4,199
+151,5,Carmin sur Mer,151,4,143
+151,9,Vermilion City,151,4,143
+152,5,Route Victoire,152,4,221
+152,9,Victory Road,152,4,221
+153,5,Mauville,153,4,128
+153,9,Violet City,153,4,128
+154,5,Jadielle,154,4,139
+154,9,Viridian City,154,4,139
+155,5,Forêt de Jade,155,4,224
+155,9,Viridian Forest,155,4,224
+156,5,Tourb'Iles,156,4,218
+156,9,Whirl Islands,156,4,218
+157,5,Route 23,157,4,171
+157,9,Route 23,157,4,171
+158,5,Centrale,158,4,201
+158,9,Power Plant,158,4,201
+161,5,Manoir Pokémon,161,4,106
+161,9,Pokémon Mansion,161,4,106
+162,5,Parc Safari,162,4,202
+162,9,Safari Zone,162,4,202
+163,5,Littorella,163,4,2
+163,9,Sandgem Town,163,4,2
+164,5,Floraville,164,4,3
+164,9,Floaroma Town,164,4,3
+165,5,Bonville,165,4,4
+165,9,Solaceon Town,165,4,4
+167,5,Féli-Cité,167,4,6
+167,9,Jubilife City,167,4,6
+168,5,Charbourg,168,4,8
+168,9,Oreburgh City,168,4,8
+169,5,Unionpolis,169,4,10
+169,9,Hearthome City,169,4,10
+170,5,Voilaroc,170,4,12
+170,9,Veilstone City,170,4,12
+171,5,Frimapic,171,4,14
+171,9,Snowpoint City,171,4,14
+172,5,Colonnes Lances,172,4,51
+172,9,Spear Pillar,172,4,51
+173,5,Parc des Amis,173,4,55
+173,9,Pal Park,173,4,55
+174,5,Square Paisible,174,4,56
+174,9,Amity Square,174,4,56
+175,5,Pré Floraville,175,4,58
+175,9,Floaroma Meadow,175,4,58
+177,5,Ile Pleine Lune,177,4,60
+177,9,Fullmoon Island,177,4,60
+178,5,Source Adieu,178,4,61
+178,9,Sendoff Spring,178,4,61
+179,5,Paradis Fleuri,179,4,63
+179,9,Flower Paradise,179,4,63
+180,5,Tunnel Runiem.,180,4,67
+180,9,Maniac Tunnel,180,4,67
+181,5,QG Galaxie,181,4,71
+181,9,Galactic HQ,181,4,71
+182,5,Rive Lac Vérité,182,4,72
+182,9,Verity Lakefront,182,4,72
+183,5,Ile Nouvellelune,183,4,79
+183,9,Newmoon Island,183,4,79
+184,5,Tour de Combat,184,4,80
+184,9,Battle Tower,184,4,80
+185,5,Aire de Combat,185,4,81
+185,9,Fight Area,185,4,81
+186,5,Aire de Survie,186,4,82
+186,9,Survival Area,186,4,82
+187,5,Passage Marin,187,4,85
+187,9,Seabreak Path,187,4,85
+188,5,Salle Originelle,188,4,86
+188,9,Hall of Origin,188,4,86
+190,5,Caverne Vérité,190,4,87
+190,9,Verity Cavern,190,4,87
+191,5,Caverne Courage,191,4,88
+191,9,Valor Cavern,191,4,88
+192,5,Caverne Savoir,192,4,89
+192,9,Acuity Cavern,192,4,89
+193,5,Féli-Télé,193,4,90
+193,9,Jubilife TV,193,4,90
+194,5,Pokémontre S.A.,194,4,91
+194,9,Pokétch Co.,194,4,91
+195,5,GTS,195,4,92
+195,9,GTS,195,4,92
+196,5,Ecole Dresseurs,196,4,93
+196,9,Trainers’ School,196,4,93
+197,5,Musée Minier,197,4,94
+197,9,Mining Museum,197,4,94
+198,5,Fleuriste,198,4,95
+198,9,Flower Shop,198,4,95
+199,5,Boutique de Vélo,199,4,96
+199,9,Cycle Shop,199,4,96
+200,5,Salle Concours,200,4,97
+200,9,Contest Hall,200,4,97
+201,5,Poffinerie,201,4,98
+201,9,Poffin House,201,4,98
+202,5,Bâtiment Etrange,202,4,99
+202,9,Foreign Building,202,4,99
+203,5,Pension Pokémon,203,4,100
+203,9,Pokémon Day Care,203,4,100
+204,5,C. Com. Voilaroc,204,4,101
+204,9,Veilstone Store,204,4,101
+205,5,Casino,205,4,102
+205,9,Game Corner,205,4,102
+206,5,Bibl. Joliberges,206,4,103
+206,9,Canalave Library,206,4,103
+207,5,Phare Panorama,207,4,104
+207,9,Vista Lighthouse,207,4,104
+208,5,Marché Rivamar,208,4,105
+208,9,Sunyshore Market,208,4,105
+209,5,Abri Petitpas,209,4,107
+209,9,Footstep House,209,4,107
+210,5,Café,210,4,108
+210,9,Café,210,4,108
+211,5,Grand Lac,211,4,109
+211,9,Grand Lake,211,4,109
+212,5,Restaurant,212,4,110
+212,9,Restaurant,212,4,110
+213,5,Parc des Combats,213,4,111
+213,9,Battle Park,213,4,111
+214,5,Zone de Combat,214,4,112
+214,9,Battle Frontier,214,4,112
+215,5,Usine de Combat,215,4,113
+215,9,Battle Factory,215,4,113
+216,5,Castel de Combat,216,4,114
+216,9,Battle Castle,216,4,114
+217,5,Arcade de Combat,217,4,115
+217,9,Battle Arcade,217,4,115
+218,5,Scène de Combat,218,4,116
+218,9,Battle Hall,218,4,116
+219,5,Monde Distorsion,219,4,117
+219,9,Distortion World,219,4,117
+220,5,Terminal Mondial,220,4,118
+220,9,Global Terminal,220,4,118
+221,5,Villa,221,4,119
+221,9,Villa,221,4,119
+222,5,Café Combats,222,4,120
+222,9,Battleground,222,4,120
+223,5,Salle MOTISMA,223,4,121
+223,9,ROTOM's Room,223,4,121
+224,5,Team G Vestigion,224,4,122
+224,9,T.G. Eterna Bldg,224,4,122
+225,5,Ruines de Fer,225,4,123
+225,9,Iron Ruins,225,4,123
+226,5,Ruines Iceberg,226,4,124
+226,9,Iceberg Ruins,226,4,124
+227,5,Ruines Pic Roche,227,4,125
+227,9,Rock Peak Ruins,227,4,125
+228,5,Ecorcia,228,4,129
+228,9,Azalea Town,228,4,129
+229,5,Doublonville,229,4,131
+229,9,Goldenrod City,229,4,131
+230,5,Acajou,230,4,134
+230,9,Mahogany Town,230,4,134
+231,5,Argenta,231,4,140
+231,9,Pewter City,231,4,140
+232,5,Lavanville,232,4,142
+232,9,Lavender Town,232,4,142
+233,5,Plateau Indigo,233,4,147
+233,9,Indigo Plateau,233,4,147
+234,5,Safrania,234,4,148
+234,9,Saffron City,234,4,148
+236,5,Phare,236,4,212
+236,9,Lighthouse,236,4,212
+237,5,Repaire Rocket d'Acajou,237,4,213
+237,9,Team Rocket HQ,237,4,213
+238,5,Doublon-Tunnel,238,4,215
+238,9,Goldenrod Tunnel,238,4,215
+239,5,Grotte Argentée,239,4,219
+239,9,Mt. Silver Cave,239,4,219
+241,5,Dôme Pokéathlon,241,4,225
+241,9,Pokéathlon Dome,241,4,225
+242,5,Aquaria,242,4,226
+242,9,S.S. Aqua,242,4,226
+243,5,Portail Safari,243,4,227
+243,9,Safari Zone Gate,243,4,227
+244,5,Grotte Falaise,244,4,228
+244,9,Cliff Cave,244,4,228
+245,5,Atrium Combat,245,4,229
+245,9,Frontier Access,245,4,229
+246,5,Sentier Carillon,246,4,230
+246,9,Bellchime Trail,246,4,230
+247,5,Ruines Sinjoh,247,4,231
+247,9,Sinjoh Ruins,247,4,231
+248,5,Tour Enfouie,248,4,232
+248,9,Embedded Tower,248,4,232
+249,5,Pokéwalker,249,4,233
+249,9,Pokéwalker,249,4,233
+250,5,Portail Falaise,250,4,234
+250,9,Cliff Edge Gate,250,4,234
+252,5,Tour Radio,252,4,208
+252,9,Radio Tower,252,4,208
+253,5,Couple Pension,253,4,2000
+253,9,Day-Care Couple,253,4,2000
+254,5,Echange Link,254,4,2001
+254,9,Link trade (arrive),254,4,2001
+255,5,Echange Link,255,4,2002
+255,9,Link trade (met),255,4,2002
+256,5,Kanto,256,4,2003
+256,9,Kanto,256,4,2003
+257,5,Johto,257,4,2004
+257,9,Johto,257,4,2004
+258,5,Hoenn,258,4,2005
+258,9,Hoenn,258,4,2005
+259,5,Sinnoh,259,4,2006
+259,9,Sinnoh,259,4,2006
+260,5,Pays lointain,260,4,2008
+260,9,Distant land,260,4,2008
+261,5,un voyageur,261,4,2009
+261,9,Traveling Man,261,4,2009
+262,5,Armand,262,4,2010
+262,9,Riley,262,4,2010
+263,5,Cynthia,263,4,2011
+263,9,Cynthia,263,4,2011
+264,5,Endroit mystér.,264,4,2012
+264,5,Endroit mystér.,264,6,2
+264,9,Mystery Zone,264,4,2012
+264,9,Mystery Zone,264,6,2
+265,5,Endroit superbe,265,4,3000
+265,9,Lovely place,265,4,3000
+266,5,Pokémon Ranger,266,4,3001
+266,9,Pokémon Ranger,266,4,3001
+267,5,Endroit lointain,267,4,3002
+267,5,Endroit lointain,267,6,4
+267,9,Faraway place,267,4,3002
+267,9,Faraway place,267,6,4
+268,5,Film Pokémon,268,4,3003
+268,9,Pokémon Movie,268,4,3003
+269,5,Film Pokémon 06,269,4,3004
+269,9,Pokémon Movie 06,269,4,3004
+270,5,Film Pokémon 07,270,4,3005
+270,9,Pokémon Movie 07,270,4,3005
+271,5,Film Pokémon 08,271,4,3006
+271,9,Pokémon Movie 08,271,4,3006
+272,5,Film Pokémon 09,272,4,3007
+272,9,Pokémon Movie 09,272,4,3007
+273,5,Film Pokémon 10,273,4,3008
+273,9,Pokémon Movie 10,273,4,3008
+274,5,Film Pokémon 11,274,4,3009
+274,9,Pokémon Movie 11,274,4,3009
+275,5,Film Pokémon 12,275,4,3010
+275,9,Pokémon Movie 12,275,4,3010
+276,5,Film Pokémon 13,276,4,3011
+276,9,Pokémon Movie 13,276,4,3011
+277,5,Film Pokémon 14,277,4,3012
+277,9,Pokémon Movie 14,277,4,3012
+278,5,Film Pokémon 15,278,4,3013
+278,9,Pokémon Movie 15,278,4,3013
+279,5,Film Pokémon 16,279,4,3014
+279,9,Pokémon Movie 16,279,4,3014
+280,5,Dessin ani. PKMN,280,4,3015
+280,9,Pokémon Cartoon,280,4,3015
+281,5,Space World,281,4,3016
+281,9,Space World,281,4,3016
+282,5,Space World 06,282,4,3017
+282,9,Space World 06,282,4,3017
+283,5,Space World 07,283,4,3018
+283,9,Space World 07,283,4,3018
+284,5,Space World 08,284,4,3019
+284,9,Space World 08,284,4,3019
+285,5,Space World 09,285,4,3020
+285,9,Space World 09,285,4,3020
+286,5,Space World 10,286,4,3021
+286,9,Space World 10,286,4,3021
+287,5,Space World 11,287,4,3022
+287,9,Space World 11,287,4,3022
+288,5,Space World 12,288,4,3023
+288,9,Space World 12,288,4,3023
+289,5,Space World 13,289,4,3024
+289,9,Space World 13,289,4,3024
+290,5,Space World 14,290,4,3025
+290,9,Space World 14,290,4,3025
+291,5,Space World 15,291,4,3026
+291,9,Space World 15,291,4,3026
+292,5,Space World 16,292,4,3027
+292,9,Space World 16,292,4,3027
+293,5,Pokémon Festa,293,4,3028
+293,9,Pokémon Festa,293,4,3028
+294,5,Pokémon Festa 06,294,4,3029
+294,9,Pokémon Festa 06,294,4,3029
+295,5,Pokémon Festa 07,295,4,3030
+295,9,Pokémon Festa 07,295,4,3030
+296,5,Pokémon Festa 08,296,4,3031
+296,9,Pokémon Festa 08,296,4,3031
+297,5,Pokémon Festa 09,297,4,3032
+297,9,Pokémon Festa 09,297,4,3032
+298,5,Pokémon Festa 10,298,4,3033
+298,9,Pokémon Festa 10,298,4,3033
+299,5,Pokémon Festa 11,299,4,3034
+299,9,Pokémon Festa 11,299,4,3034
+300,5,Pokémon Festa 12,300,4,3035
+300,9,Pokémon Festa 12,300,4,3035
+301,5,Pokémon Festa 13,301,4,3036
+301,9,Pokémon Festa 13,301,4,3036
+302,5,Pokémon Festa 14,302,4,3037
+302,9,Pokémon Festa 14,302,4,3037
+303,5,Pokémon Festa 15,303,4,3038
+303,9,Pokémon Festa 15,303,4,3038
+304,5,Pokémon Festa 16,304,4,3039
+304,9,Pokémon Festa 16,304,4,3039
+305,5,POKéPARK,305,4,3040
+305,9,POKéPARK,305,4,3040
+306,5,POKéPARK 06,306,4,3041
+306,9,POKéPARK 06,306,4,3041
+307,5,POKéPARK 07,307,4,3042
+307,9,POKéPARK 07,307,4,3042
+308,5,POKéPARK 08,308,4,3043
+308,9,POKéPARK 08,308,4,3043
+309,5,POKéPARK 09,309,4,3044
+309,9,POKéPARK 09,309,4,3044
+310,5,POKéPARK 10,310,4,3045
+310,9,POKéPARK 10,310,4,3045
+311,5,POKéPARK 11,311,4,3046
+311,9,POKéPARK 11,311,4,3046
+312,5,POKéPARK 12,312,4,3047
+312,9,POKéPARK 12,312,4,3047
+313,5,POKéPARK 13,313,4,3048
+313,9,POKéPARK 13,313,4,3048
+314,5,POKéPARK 14,314,4,3049
+314,9,POKéPARK 14,314,4,3049
+315,5,POKéPARK 15,315,4,3050
+315,9,POKéPARK 15,315,4,3050
+316,5,POKéPARK 16,316,4,3051
+316,9,POKéPARK 16,316,4,3051
+317,5,Centre Pokémon,317,4,3052
+317,9,Pokémon Center,317,4,3052
+318,5,CP Tokyo,318,4,3053
+318,9,PC Tokyo,318,4,3053
+319,5,CP Osaka,319,4,3054
+319,9,PC Osaka,319,4,3054
+320,5,CP Fukuoka,320,4,3055
+320,9,PC Fukuoka,320,4,3055
+321,5,CP Nagoya,321,4,3056
+321,9,PC Nagoya,321,4,3056
+322,5,CP Sapporo,322,4,3057
+322,9,PC Sapporo,322,4,3057
+323,5,CP Yokohama,323,4,3058
+323,9,PC Yokohama,323,4,3058
+324,5,Nintendo World,324,4,3059
+324,9,Nintendo World,324,4,3059
+325,5,Evénem. Pokémon,325,4,3060
+325,9,Pokémon Event,325,4,3060
+326,5,Evén. Pokémon 06,326,4,3061
+326,9,Pokémon Event 06,326,4,3061
+327,5,Evén. Pokémon 07,327,4,3062
+327,9,Pokémon Event 07,327,4,3062
+328,5,Evén. Pokémon 08,328,4,3063
+328,9,Pokémon Event 08,328,4,3063
+329,5,Evén. Pokémon 09,329,4,3064
+329,9,Pokémon Event 09,329,4,3064
+330,5,Evén. Pokémon 10,330,4,3065
+330,9,Pokémon Event 10,330,4,3065
+331,5,Evén. Pokémon 11,331,4,3066
+331,9,Pokémon Event 11,331,4,3066
+332,5,Evén. Pokémon 12,332,4,3067
+332,9,Pokémon Event 12,332,4,3067
+333,5,Evén. Pokémon 13,333,4,3068
+333,9,Pokémon Event 13,333,4,3068
+334,5,Evén. Pokémon 14,334,4,3069
+334,9,Pokémon Event 14,334,4,3069
+335,5,Evén. Pokémon 15,335,4,3070
+335,9,Pokémon Event 15,335,4,3070
+336,5,Evén. Pokémon 16,336,4,3071
+336,9,Pokémon Event 16,336,4,3071
+337,5,Evénement Wi-Fi,337,4,3072
+337,9,Wi-Fi Event,337,4,3072
+338,5,Cadeau Wi-Fi,338,4,3073
+338,9,Wi-Fi Gift,338,4,3073
+339,5,Fan Club Pokémon,339,4,3074
+339,9,Pokémon Fan Club,339,4,3074
+340,5,Lieu d'Evénement,340,4,3075
+340,9,Event Site,340,4,3075
+341,5,Evénem. Concert,341,4,3076
+341,9,Concert Event,341,4,3076
+342,5,M. Pokémon,342,4,2013
+342,9,Mr. Pokémon,342,4,2013
+343,5,Castor,343,4,2014
+343,9,Primo,343,4,2014
+344,1,なぞの場所,344,5,1
+344,5,Endroit Mystérieux,344,5,1
+344,9,Mystery Zone,344,5,1
+345,1,遠い場所,345,5,2
+345,5,Endroit Lointain,345,5,2
+345,9,Faraway place,345,5,2
+346,1,カノコタウン,346,5,4
+346,1,カノコタウン,346,5,81
+346,5,Renouet,346,5,4
+346,5,Renouet,346,5,81
+346,9,Nuvema Town,346,5,4
+346,9,Nuvema Town,346,5,81
+347,1,カラクサタウン,347,5,5
+347,5,Arabelle,347,5,5
+347,9,Accumula Town,347,5,5
+348,1,サンヨウシティ,348,5,6
+348,5,Ogoesse,348,5,6
+348,9,Striaton City,348,5,6
+349,1,シッポウシティ,349,5,7
+349,5,Maillard,349,5,7
+349,9,Nacrene City,349,5,7
+350,1,ヒウンシティ,350,5,8
+350,5,Volucité,350,5,8
+350,9,Castelia City,350,5,8
+351,1,ライモンシティ,351,5,9
+351,1,ライモンシティ,351,5,76
+351,5,Méanville,351,5,9
+351,5,Méanville,351,5,76
+351,9,Nimbasa City,351,5,9
+351,9,Nimbasa City,351,5,76
+352,1,ホドモエシティ,352,5,10
+352,1,ホドモエシティ,352,5,77
+352,5,Port Yoneuve,352,5,10
+352,5,Port Yoneuve,352,5,77
+352,9,Driftveil City,352,5,10
+352,9,Driftveil City,352,5,77
+353,1,フキヨセシティ,353,5,11
+353,1,フキヨセシティ,353,5,78
+353,5,Parsemille,353,5,11
+353,5,Parsemille,353,5,78
+353,9,Mistralton City,353,5,11
+353,9,Mistralton City,353,5,78
+354,1,セッカシティ,354,5,12
+354,1,セッカシティ,354,5,79
+354,5,Flocombe,354,5,12
+354,5,Flocombe,354,5,79
+354,9,Icirrus City,354,5,12
+354,9,Icirrus City,354,5,79
+355,1,ソウリュウシティ,355,5,13
+355,1,ソウリュウシティ,355,5,80
+355,5,Janusia,355,5,13
+355,5,Janusia,355,5,80
+355,9,Opelucid City,355,5,13
+355,9,Opelucid City,355,5,80
+356,1,１番道路,356,5,14
+356,5,Route 1,356,5,14
+356,9,Route 1,356,5,14
+357,1,２番道路,357,5,15
+357,5,Route 2,357,5,15
+357,9,Route 2,357,5,15
+358,1,３番道路,358,5,16
+358,5,Route 3,358,5,16
+358,9,Route 3,358,5,16
+359,1,４番道路,359,5,17
+359,5,Route 4,359,5,17
+359,9,Route 4,359,5,17
+360,1,５番道路,360,5,18
+360,1,５番道路,360,5,93
+360,5,Route 5,360,5,18
+360,5,Route 5,360,5,93
+360,9,Route 5,360,5,18
+360,9,Route 5,360,5,93
+361,1,６番道路,361,5,19
+361,1,６番道路,361,5,94
+361,5,Route 6,361,5,19
+361,5,Route 6,361,5,94
+361,9,Route 6,361,5,19
+361,9,Route 6,361,5,94
+362,1,７番道路,362,5,20
+362,1,７番道路,362,5,95
+362,5,Route 7,362,5,20
+362,5,Route 7,362,5,95
+362,9,Route 7,362,5,20
+362,9,Route 7,362,5,95
+363,1,８番道路,363,5,21
+363,1,８番道路,363,5,96
+363,5,Route 8,363,5,21
+363,5,Route 8,363,5,96
+363,9,Route 8,363,5,21
+363,9,Route 8,363,5,96
+364,1,９番道路,364,5,22
+364,1,９番道路,364,5,97
+364,5,Route 9,364,5,22
+364,5,Route 9,364,5,97
+364,9,Route 9,364,5,22
+364,9,Route 9,364,5,97
+365,1,１０番道路,365,5,23
+365,5,Route 10,365,5,23
+365,9,Route 10,365,5,23
+366,1,１１番道路,366,5,24
+366,1,１１番道路,366,5,98
+366,5,Route 11,366,5,24
+366,5,Route 11,366,5,98
+366,9,Route 11,366,5,24
+366,9,Route 11,366,5,98
+367,1,１２番道路,367,5,25
+367,1,１２番道路,367,5,99
+367,5,Route 12,367,5,25
+367,5,Route 12,367,5,99
+367,9,Route 12,367,5,25
+367,9,Route 12,367,5,99
+368,1,１３番道路,368,5,26
+368,1,１３番道路,368,5,100
+368,5,Route 13,368,5,26
+368,5,Route 13,368,5,100
+368,9,Route 13,368,5,26
+368,9,Route 13,368,5,100
+369,1,１４番道路,369,5,27
+369,1,１４番道路,369,5,101
+369,5,Route 14,369,5,27
+369,5,Route 14,369,5,101
+369,9,Route 14,369,5,27
+369,9,Route 14,369,5,101
+370,1,１５番道路,370,5,28
+370,1,１５番道路,370,5,102
+370,5,Route 15,370,5,28
+370,5,Route 15,370,5,102
+370,9,Route 15,370,5,28
+370,9,Route 15,370,5,102
+371,1,１６番道路,371,5,29
+371,1,１６番道路,371,5,103
+371,5,Route 16,371,5,29
+371,5,Route 16,371,5,103
+371,9,Route 16,371,5,29
+371,9,Route 16,371,5,103
+372,1,１７番水道,372,5,30
+372,5,Chenal 17,372,5,30
+372,9,Route 17,372,5,30
+373,1,１８番道路,373,5,31
+373,5,Route 18,373,5,31
+373,9,Route 18,373,5,31
+374,1,夢の跡地,374,5,32
+374,5,Vestiges du Rêve,374,5,32
+374,9,Dreamyard,374,5,32
+375,1,ヤグルマの森,375,5,33
+375,5,Forêt d'Empoigne,375,5,33
+375,9,Pinwheel Forest,375,5,33
+376,1,リゾートデザート,376,5,34
+376,5,Désert Délassant,376,5,34
+376,9,Desert Resort,376,5,34
+377,1,古代の城,377,5,35
+377,5,Château Enfoui,377,5,35
+377,9,Relic Castle,377,5,35
+378,1,冷凍コンテナ,378,5,36
+378,1,冷凍コンテナ,378,5,84
+378,5,Hangar Frigorifique,378,5,36
+378,5,Hangar Frigorifique,378,5,84
+378,9,Cold Storage,378,5,36
+378,9,Cold Storage,378,5,84
+379,1,電気石の洞穴,379,5,37
+379,1,電気石の洞穴,379,5,85
+379,5,Grotte Électrolithe,379,5,37
+379,5,Grotte Électrolithe,379,5,85
+379,9,Chargestone Cave,379,5,37
+379,9,Chargestone Cave,379,5,85
+380,1,ネジ山,380,5,38
+380,1,ネジ山,380,5,86
+380,5,Mont Foré,380,5,38
+380,5,Mont Foré,380,5,86
+380,9,Twist Mountain,380,5,38
+380,9,Twist Mountain,380,5,86
+381,1,リュウラセンの塔,381,5,39
+381,1,リュウラセンの塔,381,5,87
+381,5,Tour Dragospire,381,5,39
+381,5,Tour Dragospire,381,5,87
+381,9,Dragonspiral Tower,381,5,39
+381,9,Dragonspiral Tower,381,5,87
+382,1,チャンピオンロード,382,5,40
+382,5,Route Victoire,382,5,40
+382,9,Victory Road,382,5,40
+383,1,カゴメタウン,383,5,41
+383,1,カゴメタウン,383,5,104
+383,5,Entrelasque,383,5,41
+383,5,Entrelasque,383,5,104
+383,9,Lacunosa Town,383,5,41
+383,9,Lacunosa Town,383,5,104
+384,1,サザナミタウン,384,5,42
+384,1,サザナミタウン,384,5,105
+384,5,Vaguelone,384,5,42
+384,5,Vaguelone,384,5,105
+384,9,Undella Town,384,5,42
+384,9,Undella Town,384,5,105
+385,1,カナワタウン,385,5,43
+385,5,Rotombourg,385,5,43
+385,9,Anville Town,385,5,43
+386,1,ポケモンリーグ,386,5,44
+386,5,Ligue Pokémon,386,5,44
+386,9,Pokémon League,386,5,44
+387,1,Ｎの城,387,5,45
+387,5,Palais de N,387,5,45
+387,9,N's Castle,387,5,45
+388,1,ロイヤルイッシュ号,388,5,46
+388,5,L'Étoile d'Unys,388,5,46
+388,9,Royal Unova,388,5,46
+389,1,ギアステーション,389,5,47
+389,5,Engrenage du Métro,389,5,47
+389,9,Gear Station,389,5,47
+390,1,バトルサブウェイ,390,5,48
+390,5,Métro de Combat,390,5,48
+390,9,Battle Subway,390,5,48
+391,1,ミュージカルホール,391,5,49
+391,5,Music-Hall,391,5,49
+391,9,Musical Theater,391,5,49
+392,1,ブラックシティ,392,5,50
+392,1,ブラックシティ,392,5,83
+392,5,Ville Noire,392,5,50
+392,5,Ville Noire,392,5,83
+392,9,Black City,392,5,50
+392,9,Black City,392,5,83
+393,1,ホワイトフォレスト,393,5,51
+393,1,ホワイトフォレスト,393,5,82
+393,5,Forêt Blanche,393,5,51
+393,5,Forêt Blanche,393,5,82
+393,9,White Forest,393,5,51
+393,9,White Forest,393,5,82
+394,1,ユナイテッドタワー,394,5,52
+394,5,Tour Union,394,5,52
+394,9,Unity Tower,394,5,52
+395,1,地下水脈の穴,395,5,53
+395,5,Veine Souterraine,395,5,53
+395,9,Wellspring Cave,395,5,53
+396,1,フキヨセの洞穴,396,5,54
+396,5,Grotte Parsemille,396,5,54
+396,9,Mistralton Cave,396,5,54
+397,1,思索の原,397,5,55
+397,5,Clairière Réflexion,397,5,55
+397,9,Rumination Field,397,5,55
+398,1,タワーオブヘブン,398,5,56
+398,5,Tour des Cieux,398,5,56
+398,9,Celestial Tower,398,5,56
+399,1,セッカの湿原,399,5,57
+399,5,Tourbière Flocombe,399,5,57
+399,9,Moor of Icirrus,399,5,57
+400,1,ショッピングモール,400,5,58
+400,5,Centre Commercial,400,5,58
+400,9,Shopping Mall,400,5,58
+401,1,修行の岩屋,401,5,59
+401,5,Antre d'Entraînement,401,5,59
+401,9,Challenger's Cave,401,5,59
+402,1,シフトファクトリー,402,5,60
+402,5,Laboratoire Fret,402,5,60
+402,9,Poké Transfer Lab,402,5,60
+403,1,ジャイアントホール,403,5,61
+403,1,ジャイアントホール,403,5,88
+403,5,Grotte Cyclopéenne,403,5,61
+403,5,Grotte Cyclopéenne,403,5,88
+403,9,Giant Chasm,403,5,61
+403,9,Giant Chasm,403,5,88
+404,1,リバティガーデン島,404,5,62
+404,5,Île Liberté,404,5,62
+404,9,Liberty Garden,404,5,62
+405,1,Ｐ２ラボ,405,5,63
+405,5,Labo P2,405,5,63
+405,9,P2 Laboratory,405,5,63
+406,1,スカイアローブリッジ,406,5,64
+406,5,Pont Sagiciel,406,5,64
+406,9,Skyarrow Bridge,406,5,64
+407,1,ホドモエの跳ね橋,407,5,65
+407,1,ホドモエの跳ね橋,407,5,89
+407,5,Pont Yoneuve,407,5,65
+407,5,Pont Yoneuve,407,5,89
+407,9,Driftveil Drawbridge,407,5,65
+407,9,Driftveil Drawbridge,407,5,89
+408,1,シリンダーブリッジ,408,5,66
+408,1,シリンダーブリッジ,408,5,90
+408,5,Pont Ferroviaire,408,5,66
+408,5,Pont Ferroviaire,408,5,90
+408,9,Tubeline Bridge,408,5,66
+408,9,Tubeline Bridge,408,5,90
+409,1,ビレッジブリッジ,409,5,67
+409,1,ビレッジブリッジ,409,5,91
+409,5,Pont du Hameau,409,5,67
+409,5,Pont du Hameau,409,5,91
+409,9,Village Bridge,409,5,67
+409,9,Village Bridge,409,5,91
+410,1,ワンダーブリッジ,410,5,68
+410,1,ワンダーブリッジ,410,5,92
+410,5,Pont de l'Inconnu,410,5,68
+410,5,Pont de l'Inconnu,410,5,92
+410,9,Marvelous Bridge,410,5,68
+410,9,Marvelous Bridge,410,5,92
+411,1,ハイリンク,411,5,69
+411,5,Heylink,411,5,69
+411,9,Entralink,411,5,69
+412,1,ほうじょうの社,412,5,70
+412,5,Autel Abondance,412,5,70
+412,9,Abundant Shrine,412,5,70
+413,1,サザナミ湾,413,5,71
+413,5,Baie Vaguelone,413,5,71
+413,9,Undella Bay,413,5,71
+414,1,迷いの森,414,5,72
+414,5,Bois des Illusions,414,5,72
+414,9,Lostlorn Forest,414,5,72
+415,1,試練の室,415,5,73
+415,5,Salle Épreuve,415,5,73
+415,9,Trial Chamber,415,5,73
+416,1,導の間,416,5,74
+416,5,Espace Guide,416,5,74
+416,9,Guidance Chamber,416,5,74
+417,1,ハイリンクの森,417,5,75
+417,5,Forêt du Heylink,417,5,75
+417,9,Entree Forest,417,5,75
+418,1,カラクサゲート,418,5,106
+418,5,Porte Arabelle,418,5,106
+418,9,Accumula Gate,418,5,106
+419,1,サザナミゲート,419,5,107
+419,5,Porte Vaguelone,419,5,107
+419,9,Undella Gate,419,5,107
+420,1,シッポウゲート,420,5,108
+420,5,Porte Maillard,420,5,108
+420,9,Nacrene Gate,420,5,108
+421,1,ヒウンゲート,421,5,109
+421,5,Porte Volucité,421,5,109
+421,9,Castelia Gate,421,5,109
+422,1,ライモンゲート,422,5,110
+422,5,Porte Méanville,422,5,110
+422,9,Nimbasa Gate,422,5,110
+423,1,ソウリュウゲート,423,5,111
+423,5,Porte Janusia,423,5,111
+423,9,Opelucid Gate,423,5,111
+424,1,ブラックゲート,424,5,112
+424,5,Porte Noire,424,5,112
+424,9,Black Gate,424,5,112
+425,1,ホワイトゲート,425,5,113
+425,5,Porte Blanche,425,5,113
+425,9,White Gate,425,5,113
+426,1,ブリッジゲート,426,5,114
+426,5,Porte de Pont,426,5,114
+426,9,Bridge Gate,426,5,114
+427,1,ロードゲート,427,5,115
+427,5,Porte de Route,427,5,115
+427,9,Route Gate,427,5,115
+428,1,海底遺跡,428,5,116
+428,5,Ruines des Abysses,428,5,116
+428,9,Abyssal Ruins,428,5,116
+531,1,ヒオウギシティ,531,5,117
+531,5,Pavonnay,531,5,117
+531,9,Aspertia City,531,5,117
+532,1,タチワキシティ,532,5,118
+532,5,Ondes-sur-Mer,532,5,118
+532,9,Virbank City,532,5,118
+533,1,セイガイハシティ,533,5,119
+533,5,Papeloa,533,5,119
+533,9,Humilau City,533,5,119
+534,1,ポケウッド,534,5,120
+534,5,Pokéwood,534,5,120
+534,9,PokéStar Studios,534,5,120
+535,1,ジョインアベニュー,535,5,121
+535,5,Galerie Concorde,535,5,121
+535,9,Join Avenue,535,5,121
+536,1,サンギタウン,536,5,122
+536,5,Amaillide,536,5,122
+536,9,Floccesy Town,536,5,122
+537,1,ヤマジタウン,537,5,123
+537,5,Arpentières,537,5,123
+537,9,Lentimas Town,537,5,123
+538,1,１９番道路,538,5,124
+538,5,Route 19,538,5,124
+538,9,Route 19,538,5,124
+539,1,２０番道路,539,5,125
+539,5,Route 20,539,5,125
+539,9,Route 20,539,5,125
+540,1,２１番水道,540,5,126
+540,5,Chenal 21,540,5,126
+540,9,Route 21,540,5,126
+541,1,２２番道路,541,5,127
+541,5,Route 22,541,5,127
+541,9,Route 22,541,5,127
+542,1,２３番道路,542,5,128
+542,5,Route 23,542,5,128
+542,9,Route 23,542,5,128
+543,1,ヒウン下水道,543,5,129
+543,5,Égouts de Volucité,543,5,129
+543,9,Castelia Sewers,543,5,129
+544,1,サンギ牧場,544,5,130
+544,5,Ranch d'Amaillide,544,5,130
+544,9,Floccesy Ranch,544,5,130
+545,1,タチワキコンビナート,545,5,131
+545,5,Z.I. d'Ondes-sur-Mer,545,5,131
+545,9,Virbank Complex,545,5,131
+546,1,リバースマウンテン,546,5,132
+546,5,Mont Renenvers,546,5,132
+546,9,Reversal Mountain,546,5,132
+547,1,ストレンジャーハウス,547,5,133
+547,5,Manoir de l'Étrange,547,5,133
+547,9,Strange House,547,5,133
+548,1,チャンピオンロード,548,5,134
+548,5,Route Victoire,548,5,134
+548,9,Victory Road,548,5,134
+549,1,プラズマフリゲート,549,5,135
+549,5,Frégate Plasma,549,5,135
+549,9,Plasma Frigate,549,5,135
+550,1,古代の抜け道,550,5,136
+550,5,Chemin Enfoui,550,5,136
+550,9,Relic Passage,550,5,136
+551,1,ヤーコンロード,551,5,137
+551,5,Route Bardane,551,5,137
+551,9,Clay Tunnel,551,5,137
+552,1,白の樹洞,552,5,139
+552,5,Arbre Creux Blanc,552,5,139
+552,9,White Treehollow,552,5,139
+553,1,黒の摩天楼,553,5,140
+553,5,Gratte-Ciel Noir,553,5,140
+553,9,Black Tower,553,5,140
+554,1,海辺の洞穴,554,5,141
+554,5,Grotte Littorale,554,5,141
+554,9,Seaside Cave,554,5,141
+555,1,心の空洞,555,5,142
+555,5,Caverne des Esprits,555,5,142
+555,9,Cave of Being,555,5,142
+556,1,隠し穴,556,5,143
+556,5,Trouée Cachée,556,5,143
+556,9,Hidden Grotto,556,5,143
+557,1,マリンチューブ,557,5,144
+557,5,Aquatube,557,5,144
+557,9,Marine Tube,557,5,144
+558,1,タチワキゲート,558,5,145
+558,5,Porte Ondes-sur-Mer,558,5,145
+558,9,Virbank Gate,558,5,145
+559,1,ヒオウギゲート,559,5,146
+559,5,Porte Pavonnay,559,5,146
+559,9,Aspertia Gate,559,5,146
+560,1,自然保護区,560,5,147
+560,5,Réserve Naturelle,560,5,147
+560,9,Nature Sanctuary,560,5,147
+561,1,メダル事務局,561,5,148
+561,5,Bureau des Médailles,561,5,148
+561,9,Medal Secretariat,561,5,148
+562,1,地底遺跡,562,5,149
+562,5,Ruines Enfouies,562,5,149
+562,9,Underground Ruins,562,5,149
+563,1,岩山の間,563,5,150
+563,5,Salle Pic Rocheux,563,5,150
+563,9,Rocky Mountain Room,563,5,150
+564,1,氷山の間,564,5,151
+564,5,Salle Iceberg,564,5,151
+564,9,Glacier Room,564,5,151
+565,1,鉄の間,565,5,152
+565,5,Salle Fer,565,5,152
+565,9,Iron Room,565,5,152
+566,1,誓いの林,566,5,153
+566,5,Bois du Serment,566,5,153
+566,9,Pledge Grove,566,5,153
+587,1,アサメタウン,587,6,6
+587,3,조아마을,587,6,6
+587,5,Bourg Croquis,587,6,6
+587,6,Escissia,587,6,6
+587,7,Pueblo Boceto,587,6,6
+587,8,Borgo Bozzetto,587,6,6
+587,9,Vaniville Town,587,6,6
+587,11,アサメタウン,587,6,6
+588,1,１ばんどうろ,588,6,8
+588,3,1번도로,588,6,8
+588,5,Route 1,588,6,8
+588,6,Route 1,588,6,8
+588,7,Ruta 1,588,6,8
+588,8,Percorso 1,588,6,8
+588,9,Route 1,588,6,8
+588,11,１番道路,588,6,8
+589,1,アサメのこみち,589,6,9
+589,3,조아의 작은 길,589,6,9
+589,5,Sentier Croquis,589,6,9
+589,6,Escissia-Pfad,589,6,9
+589,7,Sendero Boceto,589,6,9
+589,8,Vicolo Bozzetto,589,6,9
+589,9,Vaniville Pathway,589,6,9
+589,11,アサメの小道,589,6,9
+590,1,メイスイタウン,590,6,10
+590,3,수미마을,590,6,10
+590,5,Quarellis,590,6,10
+590,6,Aquarellia,590,6,10
+590,7,Pueblo Acuarela,590,6,10
+590,8,Rio Acquerello,590,6,10
+590,9,Aquacorde Town,590,6,10
+590,11,メイスイタウン,590,6,10
+591,1,２ばんどうろ,591,6,12
+591,3,2번도로,591,6,12
+591,5,Route 2,591,6,12
+591,6,Route 2,591,6,12
+591,7,Ruta 2,591,6,12
+591,8,Percorso 2,591,6,12
+591,9,Route 2,591,6,12
+591,11,２番道路,591,6,12
+592,1,アバンセどおり,592,6,13
+592,3,아방쎄 도로,592,6,13
+592,5,Chemin Progrès,592,6,13
+592,6,Progrès-Weg,592,6,13
+592,7,Vía del Avance,592,6,13
+592,8,Via Progresso,592,6,13
+592,9,Avance Trail,592,6,13
+592,11,アバンセ通り,592,6,13
+593,1,ハクダンのもり,593,6,14
+593,3,백단숲,593,6,14
+593,5,Forêt de Neuvartault,593,6,14
+593,6,Nouvaria-Wald,593,6,14
+593,7,Bosque de Novarte,593,6,14
+593,8,Bosco Novartopoli,593,6,14
+593,9,Santalune Forest,593,6,14
+593,11,ハクダンの森,593,6,14
+594,1,３ばんどうろ,594,6,16
+594,3,3번도로,594,6,16
+594,5,Route 3,594,6,16
+594,6,Route 3,594,6,16
+594,7,Ruta 3,594,6,16
+594,8,Percorso 3,594,6,16
+594,9,Route 3,594,6,16
+594,11,３番道路,594,6,16
+595,1,ウベールどおり,595,6,17
+595,3,우베르 도로,595,6,17
+595,5,Chemin Ouvert,595,6,17
+595,6,Ouvert-Weg,595,6,17
+595,7,Senda Despejada,595,6,17
+595,8,Via Aperta,595,6,17
+595,9,Ouvert Way,595,6,17
+595,11,ウベール通り,595,6,17
+596,1,ハクダンシティ,596,6,18
+596,3,백단시티,596,6,18
+596,5,Neuvartault,596,6,18
+596,6,Nouvaria City,596,6,18
+596,7,Ciudad Novarte,596,6,18
+596,8,Novartopoli,596,6,18
+596,9,Santalune City,596,6,18
+596,11,ハクダンシティ,596,6,18
+597,1,４ばんどうろ,597,6,20
+597,3,4번도로,597,6,20
+597,5,Route 4,597,6,20
+597,6,Route 4,597,6,20
+597,7,Ruta 4,597,6,20
+597,8,Percorso 4,597,6,20
+597,9,Route 4,597,6,20
+597,11,４番道路,597,6,20
+598,1,パルテールかいどう,598,6,21
+598,3,파르테르 가도,598,6,21
+598,5,Route Fleurie,598,6,21
+598,6,Parterre-Weg,598,6,21
+598,7,Senda del Parterre,598,6,21
+598,8,Viale Parterre,598,6,21
+598,9,Parterre Way,598,6,21
+598,11,パルテール街道,598,6,21
+599,1,ミアレシティ,599,6,22
+599,3,미르시티,599,6,22
+599,5,Illumis,599,6,22
+599,6,Illumina City,599,6,22
+599,7,Ciudad Luminalia,599,6,22
+599,8,Luminopoli,599,6,22
+599,9,Lumiose City,599,6,22
+599,11,ミアレシティ,599,6,22
+600,1,プリズムタワー,600,6,24
+600,3,프리즘타워,600,6,24
+600,5,Tour Prismatique,600,6,24
+600,6,Prismaturm,600,6,24
+600,7,Torre Prisma,600,6,24
+600,8,Torre Prisma,600,6,24
+600,9,Prism Tower,600,6,24
+600,11,プリズムタワー,600,6,24
+601,1,フラダリラボ,601,6,26
+601,3,플라드리 래버러토리,601,6,26
+601,5,Labos Lysandre,601,6,26
+601,6,Labor von Flordelis,601,6,26
+601,7,Laboratorios Lysson,601,6,26
+601,8,Laboratori Elisio,601,6,26
+601,9,Lysandre Labs,601,6,26
+601,11,フラダリラボ,601,6,26
+602,1,５ばんどうろ,602,6,28
+602,3,5번도로,602,6,28
+602,5,Route 5,602,6,28
+602,6,Route 5,602,6,28
+602,7,Ruta 5,602,6,28
+602,8,Percorso 5,602,6,28
+602,9,Route 5,602,6,28
+602,11,５番道路,602,6,28
+603,1,ベルサンどおり,603,6,29
+603,3,베르성 도로,603,6,29
+603,5,Chemin du Versant,603,6,29
+603,6,Coteau-Weg,603,6,29
+603,7,Vía Repecho,603,6,29
+603,8,Via Versante,603,6,29
+603,9,Versant Road,603,6,29
+603,11,ベルサン通り,603,6,29
+604,1,コボクタウン,604,6,30
+604,3,고목내마을,604,6,30
+604,5,Fort-Vanitas,604,6,30
+604,6,Vanitéa,604,6,30
+604,7,Pueblo Vánitas,604,6,30
+604,8,Castel Vanità,604,6,30
+604,9,Camphrier Town,604,6,30
+604,11,コボクタウン,604,6,30
+605,1,ショボンヌじょう,605,6,32
+605,3,침울한 성,605,6,32
+605,5,Fort de Vanitas,605,6,32
+605,6,Château Tristesse,605,6,32
+605,7,Castillo Caduco,605,6,32
+605,8,Maniero Sottotono,605,6,32
+605,9,Shabboneau Castle,605,6,32
+605,11,ショボンヌ城,605,6,32
+606,1,６ばんどうろ,606,6,34
+606,3,6번도로,606,6,34
+606,5,Route 6,606,6,34
+606,6,Route 6,606,6,34
+606,7,Ruta 6,606,6,34
+606,8,Percorso 6,606,6,34
+606,9,Route 6,606,6,34
+606,11,６番道路,606,6,34
+607,1,パレのなみきみち,607,6,35
+607,3,팔레 가로수 길,607,6,35
+607,5,Allée du Palais,607,6,35
+607,6,Palais-Allee,607,6,35
+607,7,Alameda del Palacio,607,6,35
+607,8,Boulevard Palazzo,607,6,35
+607,9,Palais Lane,607,6,35
+607,11,パレの並木道,607,6,35
+608,1,パルファムきゅうでん,608,6,36
+608,3,파르팽 궁전,608,6,36
+608,5,Palais Chaydeuvre,608,6,36
+608,6,Magnum-Opus-Palast,608,6,36
+608,7,Palacio Cénit,608,6,36
+608,8,Reggia Aurea,608,6,36
+608,9,Parfum Palace,608,6,36
+608,11,パルファム宮殿,608,6,36
+609,1,７ばんどうろ,609,6,38
+609,3,7번도로,609,6,38
+609,5,Route 7,609,6,38
+609,6,Route 7,609,6,38
+609,7,Ruta 7,609,6,38
+609,8,Percorso 7,609,6,38
+609,9,Route 7,609,6,38
+609,11,７番道路,609,6,38
+610,1,リビエールライン,610,6,39
+610,3,리비에르 라인,610,6,39
+610,5,Chemin des Berges,610,6,39
+610,6,Rivière-Promenade,610,6,39
+610,7,Paseo de la Ribera,610,6,39
+610,8,Via Fiume,610,6,39
+610,9,Rivière Walk,610,6,39
+610,11,リビエールライン,610,6,39
+611,1,ショウヨウシティ,611,6,40
+611,3,삼채시티,611,6,40
+611,5,Relifac-le-Haut,611,6,40
+611,6,Relievera City,611,6,40
+611,7,Ciudad Relieve,611,6,40
+611,8,Altoripoli,611,6,40
+611,9,Cyllage City,611,6,40
+611,11,ショウヨウシティ,611,6,40
+612,1,８ばんどうろ,612,6,42
+612,3,8번도로,612,6,42
+612,5,Route 8,612,6,42
+612,6,Route 8,612,6,42
+612,7,Ruta 8,612,6,42
+612,8,Percorso 8,612,6,42
+612,9,Route 8,612,6,42
+612,11,８番道路,612,6,42
+613,1,ミュライユかいがん,613,6,43
+613,3,미라유 해안,613,6,43
+613,5,Falaise Muraille,613,6,43
+613,6,Muraille-Küstenpfad,613,6,43
+613,7,Muralla Costera,613,6,43
+613,8,Muraglia Costiera,613,6,43
+613,9,Muraille Coast,613,6,43
+613,11,ミュライユ海岸,613,6,43
+614,1,コウジンタウン,614,6,44
+614,3,가라마을,614,6,44
+614,5,Roche-sur-Gliffe,614,6,44
+614,6,Petrophia,614,6,44
+614,7,Pueblo Petroglifo,614,6,44
+614,8,Petroglifari,614,6,44
+614,9,Ambrette Town,614,6,44
+614,11,コウジンタウン,614,6,44
+615,1,９ばんどうろ,615,6,46
+615,3,9번도로,615,6,46
+615,5,Route 9,615,6,46
+615,6,Route 9,615,6,46
+615,7,Ruta 9,615,6,46
+615,8,Percorso 9,615,6,46
+615,9,Route 9,615,6,46
+615,11,９番道路,615,6,46
+616,1,トゲトゲさんどう,616,6,47
+616,3,뿔 산길,616,6,47
+616,5,Piste Piquante,616,6,47
+616,6,Rihorn-Pass,616,6,47
+616,7,Paso de Rhyhorn,616,6,47
+616,8,Sentiero Punzoni,616,6,47
+616,9,Spikes Passage,616,6,47
+616,11,トゲトゲ山道,616,6,47
+617,1,バトルシャトー,617,6,48
+617,3,배틀샤토,617,6,48
+617,5,Château de Combat,617,6,48
+617,6,Kampfschloss,617,6,48
+617,7,Bastión Batalla,617,6,48
+617,8,Castello Lotta,617,6,48
+617,9,Battle Chateau,617,6,48
+617,11,バトルシャトー,617,6,48
+618,1,１０ばんどうろ,618,6,50
+618,3,10번도로,618,6,50
+618,5,Route 10,618,6,50
+618,6,Route 10,618,6,50
+618,7,Ruta 10,618,6,50
+618,8,Percorso 10,618,6,50
+618,9,Route 10,618,6,50
+618,11,１０番道路,618,6,50
+619,1,メンヒルロード,619,6,51
+619,3,멘히르로드,619,6,51
+619,5,Route Menhir,619,6,51
+619,6,Menhir-Weg,619,6,51
+619,7,Camino Menhires,619,6,51
+619,8,Strada dei Menhir,619,6,51
+619,9,Menhir Trail,619,6,51
+619,11,メンヒルロード,619,6,51
+620,1,セキタイタウン,620,6,52
+620,3,옥유마을,620,6,52
+620,5,Cromlac’h,620,6,52
+620,6,Cromlexia,620,6,52
+620,7,Pueblo Crómlech,620,6,52
+620,8,Cromleburgo,620,6,52
+620,9,Geosenge Town,620,6,52
+620,11,セキタイタウン,620,6,52
+621,1,１１ばんどうろ,621,6,54
+621,3,11번도로,621,6,54
+621,5,Route 11,621,6,54
+621,6,Route 11,621,6,54
+621,7,Ruta 11,621,6,54
+621,8,Percorso 11,621,6,54
+621,9,Route 11,621,6,54
+621,11,１１番道路,621,6,54
+622,1,ミロワールどおり,622,6,55
+622,3,미르와르 도로,622,6,55
+622,5,Chemin Miroir,622,6,55
+622,6,Miroir-Weg,622,6,55
+622,7,Senda Reflejos,622,6,55
+622,8,Via dei Riflessi,622,6,55
+622,9,Miroir Way,622,6,55
+622,11,ミロワール通り,622,6,55
+623,1,うつしみのどうくつ,623,6,56
+623,3,비춤의 동굴,623,6,56
+623,5,Grotte Miroitante,623,6,56
+623,6,Spiegelhöhle,623,6,56
+623,7,Cueva Reflejos,623,6,56
+623,8,Grotta dei Riflessi,623,6,56
+623,9,Reflection Cave,623,6,56
+623,11,映し身の洞窟,623,6,56
+624,1,シャラシティ,624,6,58
+624,3,사라시티,624,6,58
+624,5,Yantreizh,624,6,58
+624,6,Yantara City,624,6,58
+624,7,Ciudad Yantra,624,6,58
+624,8,Yantaropoli,624,6,58
+624,9,Shalour City,624,6,58
+624,11,シャラシティ,624,6,58
+625,1,マスタータワー,625,6,60
+625,3,마스터타워,625,6,60
+625,5,Tour Maîtrise,625,6,60
+625,6,Turm der Erkenntnis,625,6,60
+625,7,Torre Maestra,625,6,60
+625,8,Torre Maestra,625,6,60
+625,9,Tower of Mastery,625,6,60
+625,11,マスタータワー,625,6,60
+626,1,１２ばんどうろ,626,6,62
+626,3,12번도로,626,6,62
+626,5,Route 12,626,6,62
+626,6,Route 12,626,6,62
+626,7,Ruta 12,626,6,62
+626,8,Percorso 12,626,6,62
+626,9,Route 12,626,6,62
+626,11,１２番道路,626,6,62
+627,1,フラージュどおり,627,6,63
+627,3,프라주 도로,627,6,63
+627,5,Chemin Fourrage,627,6,63
+627,6,Fourrage-Weg,627,6,63
+627,7,Vereda del Heno,627,6,63
+627,8,Via dei Pascoli,627,6,63
+627,9,Fourrage Road,627,6,63
+627,11,フラージュ通り,627,6,63
+628,1,ヒヨクシティ,628,6,64
+628,3,비익시티,628,6,64
+628,5,Port Tempères,628,6,64
+628,6,Tempera City,628,6,64
+628,7,Ciudad Témpera,628,6,64
+628,8,Temperopoli,628,6,64
+628,9,Coumarine City,628,6,64
+628,11,ヒヨクシティ,628,6,64
+629,1,１３ばんどうろ,629,6,66
+629,3,13번도로,629,6,66
+629,5,Route 13,629,6,66
+629,6,Route 13,629,6,66
+629,7,Ruta 13,629,6,66
+629,8,Percorso 13,629,6,66
+629,9,Route 13,629,6,66
+629,11,１３番道路,629,6,66
+630,1,ミアレのこうや,630,6,67
+630,3,미르 황야,630,6,67
+630,5,Steppe d’Illumis,630,6,67
+630,6,Illumina-Steppe,630,6,67
+630,7,Páramo de Luminalia,630,6,67
+630,8,Landa di Luminopoli,630,6,67
+630,9,Lumiose Badlands,630,6,67
+630,11,ミアレの荒野,630,6,67
+631,1,１４ばんどうろ,631,6,68
+631,3,14번도로,631,6,68
+631,5,Route 14,631,6,68
+631,6,Route 14,631,6,68
+631,7,Ruta 14,631,6,68
+631,8,Percorso 14,631,6,68
+631,9,Route 14,631,6,68
+631,11,１４番道路,631,6,68
+632,1,クノエのりんどう,632,6,69
+632,3,후늬 임도,632,6,69
+632,5,Laie Romant-ss-Bois,632,6,69
+632,6,Romantia-Waldweg,632,6,69
+632,7,Arboleda Romantis,632,6,69
+632,8,Sentiero Romantopoli,632,6,69
+632,9,Laverre Nature Trail,632,6,69
+632,11,クノエの林道,632,6,69
+633,1,クノエシティ,633,6,70
+633,3,후늬시티,633,6,70
+633,5,Romant-sous-Bois,633,6,70
+633,6,Romantia City,633,6,70
+633,7,Ciudad Romantis,633,6,70
+633,8,Romantopoli,633,6,70
+633,9,Laverre City,633,6,70
+633,11,クノエシティ,633,6,70
+634,1,ボールこうじょう,634,6,72
+634,3,볼 공장,634,6,72
+634,5,Usine de Poké Balls,634,6,72
+634,6,Pokéball-Fabrik,634,6,72
+634,7,Fábrica Poké Balls,634,6,72
+634,8,Fabbrica Poké Ball,634,6,72
+634,9,Poké Ball Factory,634,6,72
+634,11,ボール工場,634,6,72
+635,1,１５ばんどうろ,635,6,74
+635,3,15번도로,635,6,74
+635,5,Route 15,635,6,74
+635,6,Route 15,635,6,74
+635,7,Ruta 15,635,6,74
+635,8,Percorso 15,635,6,74
+635,9,Route 15,635,6,74
+635,11,１５番道路,635,6,74
+636,1,ブランどおり,636,6,75
+636,3,브렁 도로,636,6,75
+636,5,Chemin Brun,636,6,75
+636,6,Brun-Weg,636,6,75
+636,7,Sendero Hojarasca,636,6,75
+636,8,Via Fogliebrune,636,6,75
+636,9,Brun Way,636,6,75
+636,11,ブラン通り,636,6,75
+637,1,フウジョタウン,637,6,76
+637,3,버들비마을,637,6,76
+637,5,La Frescale,637,6,76
+637,6,Frescora,637,6,76
+637,7,Pueblo Fresco,637,6,76
+637,8,Frescovilla,637,6,76
+637,9,Dendemille Town,637,6,76
+637,11,フウジョタウン,637,6,76
+638,1,１６ばんどうろ,638,6,78
+638,3,16번도로,638,6,78
+638,5,Route 16,638,6,78
+638,6,Route 16,638,6,78
+638,7,Ruta 16,638,6,78
+638,8,Percorso 16,638,6,78
+638,9,Route 16,638,6,78
+638,11,１６番道路,638,6,78
+639,1,トリストどおり,639,6,79
+639,3,트리스트 도로,639,6,79
+639,5,Chemin Tristesse,639,6,79
+639,6,Tristesse-Weg,639,6,79
+639,7,Senda Melancolía,639,6,79
+639,8,Via Malinconia,639,6,79
+639,9,Mélancolie Path,639,6,79
+639,11,トリスト通り,639,6,79
+640,1,フロストケイブ,640,6,82
+640,3,프로스트케이브,640,6,82
+640,5,Caverne Gelée,640,6,82
+640,6,Frosthöhle,640,6,82
+640,7,Gruta Helada,640,6,82
+640,8,Caverna Gelata,640,6,82
+640,9,Frost Cavern,640,6,82
+640,11,フロストケイブ,640,6,82
+641,1,１７ばんどうろ,641,6,84
+641,3,17번도로,641,6,84
+641,5,Route 17,641,6,84
+641,6,Route 17,641,6,84
+641,7,Ruta 17,641,6,84
+641,8,Percorso 17,641,6,84
+641,9,Route 17,641,6,84
+641,11,１７番道路,641,6,84
+642,1,マンムーロード,642,6,85
+642,3,맘모꾸리로드,642,6,85
+642,5,Route Mammochon,642,6,85
+642,6,Mamutel-Weg,642,6,85
+642,7,Sendero Mamoswine,642,6,85
+642,8,Passo Mamoswine,642,6,85
+642,9,Mamoswine Road,642,6,85
+642,11,マンムーロード,642,6,85
+643,1,ヒャッコクシティ,643,6,86
+643,3,향전시티,643,6,86
+643,5,Flusselles,643,6,86
+643,6,Fluxia City,643,6,86
+643,7,Ciudad Fluxus,643,6,86
+643,8,Fluxopoli,643,6,86
+643,9,Anistar City,643,6,86
+643,11,ヒャッコクシティ,643,6,86
+644,1,１８ばんどうろ,644,6,88
+644,3,18번도로,644,6,88
+644,5,Route 18,644,6,88
+644,6,Route 18,644,6,88
+644,7,Ruta 18,644,6,88
+644,8,Percorso 18,644,6,88
+644,9,Route 18,644,6,88
+644,11,１８番道路,644,6,88
+645,1,エトロワ・バレどおり,645,6,89
+645,3,에뜨르와 발레 도로,645,6,89
+645,5,Chemin des Gorges,645,6,89
+645,6,Vallée-Étroite-Weg,645,6,89
+645,7,Senda Valle Angosto,645,6,89
+645,8,Via Valle Stretta,645,6,89
+645,9,Vallée Étroite Way,645,6,89
+645,11,エトロワ・バレ通り,645,6,89
+646,1,レンリタウン,646,6,90
+646,3,배롱마을,646,6,90
+646,5,Mozheim,646,6,90
+646,6,Mosaia,646,6,90
+646,7,Pueblo Mosaico,646,6,90
+646,8,Ponte Mosaico,646,6,90
+646,9,Couriway Town,646,6,90
+646,11,レンリタウン,646,6,90
+647,1,１９ばんどうろ,647,6,92
+647,3,19번도로,647,6,92
+647,5,Route 19,647,6,92
+647,6,Route 19,647,6,92
+647,7,Ruta 19,647,6,92
+647,8,Percorso 19,647,6,92
+647,9,Route 19,647,6,92
+647,11,１９番道路,647,6,92
+648,1,ラルジュ・バレどおり,648,6,93
+648,3,라주 발레 도로,648,6,93
+648,5,Chemin du Val,648,6,93
+648,6,Vallée-Large-Weg,648,6,93
+648,7,Senda del Gran Valle,648,6,93
+648,8,Via Valle Larga,648,6,93
+648,9,Grande Vallée Way,648,6,93
+648,11,ラルジュ・バレ通り,648,6,93
+649,1,エイセツシティ,649,6,94
+649,3,이설시티,649,6,94
+649,5,Auffrac-les-Congères,649,6,94
+649,6,Fractalia City,649,6,94
+649,7,Ciudad Fractal,649,6,94
+649,8,Fractalopoli,649,6,94
+649,9,Snowbelle City,649,6,94
+649,11,エイセツシティ,649,6,94
+650,1,２０ばんどうろ,650,6,96
+650,3,20번도로,650,6,96
+650,5,Route 20,650,6,96
+650,6,Route 20,650,6,96
+650,7,Ruta 20,650,6,96
+650,8,Percorso 20,650,6,96
+650,9,Route 20,650,6,96
+650,11,２０番道路,650,6,96
+651,1,まよいのもり,651,6,97
+651,3,미혹의 숲,651,6,97
+651,5,Bois du Dédale,651,6,97
+651,6,Irrwald,651,6,97
+651,7,Bosque Errantes,651,6,97
+651,8,Bosco Passoperso,651,6,97
+651,9,Winding Woods,651,6,97
+651,11,迷いの森,651,6,97
+652,1,ポケモンのむら,652,6,98
+652,3,포켓몬마을,652,6,98
+652,5,Village Pokémon,652,6,98
+652,6,Pokémon-Dorf,652,6,98
+652,7,Villa Pokémon,652,6,98
+652,8,Valle dei Pokémon,652,6,98
+652,9,Pokémon Village,652,6,98
+652,11,ポケモンの村,652,6,98
+653,1,２１ばんどうろ,653,6,100
+653,3,21번도로,653,6,100
+653,5,Route 21,653,6,100
+653,6,Route 21,653,6,100
+653,7,Ruta 21,653,6,100
+653,8,Percorso 21,653,6,100
+653,9,Route 21,653,6,100
+653,11,２１番道路,653,6,100
+654,1,デルニエどおり,654,6,101
+654,3,데르니에 도로,654,6,101
+654,5,Chemin Final,654,6,101
+654,6,Dernier-Weg,654,6,101
+654,7,Vía Ultimia,654,6,101
+654,8,Via Ultima,654,6,101
+654,9,Dernière Way,654,6,101
+654,11,デルニエ通り,654,6,101
+655,1,２２ばんどうろ,655,6,102
+655,3,22번도로,655,6,102
+655,5,Route 22,655,6,102
+655,6,Route 22,655,6,102
+655,7,Ruta 22,655,6,102
+655,8,Percorso 22,655,6,102
+655,9,Route 22,655,6,102
+655,11,２２番道路,655,6,102
+656,1,デトルネどおり,656,6,103
+656,3,데뚜르네 도로,656,6,103
+656,5,Chemin Détour,656,6,103
+656,6,Détourné-Weg,656,6,103
+656,7,Vía Desvío,656,6,103
+656,8,Via Detour,656,6,103
+656,9,Détourner Way,656,6,103
+656,11,デトルネ通り,656,6,103
+657,1,チャンピオンロード,657,6,104
+657,3,챔피언로드,657,6,104
+657,5,Route Victoire,657,6,104
+657,6,Siegesstraße,657,6,104
+657,7,Calle Victoria,657,6,104
+657,8,Via Vittoria,657,6,104
+657,9,Victory Road,657,6,104
+657,11,チャンピオンロード,657,6,104
+658,1,ポケモンリーグ,658,6,106
+658,3,포켓몬리그,658,6,106
+658,5,Ligue Pokémon,658,6,106
+658,6,Pokémon Liga,658,6,106
+658,7,Liga Pokémon,658,6,106
+658,8,Lega Pokémon,658,6,106
+658,9,Pokémon League,658,6,106
+658,11,ポケモンリーグ,658,6,106
+659,1,キナンシティ,659,6,108
+659,3,기남시티,659,6,108
+659,5,Batisques,659,6,108
+659,6,Batika City,659,6,108
+659,7,Ciudad Batik,659,6,108
+659,8,Batikopoli,659,6,108
+659,9,Kiloude City,659,6,108
+659,11,キナンシティ,659,6,108
+660,1,バトルハウス,660,6,110
+660,3,배틀하우스,660,6,110
+660,5,Maison de Combat,660,6,110
+660,6,Kampfhaus,660,6,110
+660,7,Mansión Batalla,660,6,110
+660,8,Villa Lotta,660,6,110
+660,9,Battle Maison,660,6,110
+660,11,バトルハウス,660,6,110
+661,1,アズールわん,661,6,112
+661,3,아쥐르만,661,6,112
+661,5,Baie Azur,661,6,112
+661,6,Azurbucht,661,6,112
+661,7,Bahía Azul,661,6,112
+661,8,Baia Azzurra,661,6,112
+661,9,Azure Bay,661,6,112
+661,11,アズール湾,661,6,112
+662,1,フウジョゲート,662,6,114
+662,3,버들비게이트,662,6,114
+662,5,Porte de La Frescale,662,6,114
+662,6,Frescora-Tor,662,6,114
+662,7,Acceso a Fresco,662,6,114
+662,8,Varco Frescovilla,662,6,114
+662,9,Dendemille Gate,662,6,114
+662,11,フウジョゲート,662,6,114
+663,1,レンリゲート,663,6,116
+663,3,배롱게이트,663,6,116
+663,5,Porte de Mozheim,663,6,116
+663,6,Mosaia-Tor,663,6,116
+663,7,Acceso a Mosaico,663,6,116
+663,8,Varco Ponte Mosaico,663,6,116
+663,9,Couriway Gate,663,6,116
+663,11,レンリゲート,663,6,116
+664,1,コウジンゲート,664,6,118
+664,3,가라게이트,664,6,118
+664,5,Porte de R. s/Gliffe,664,6,118
+664,6,Petrophia-Tor,664,6,118
+664,7,Acceso a Petroglifo,664,6,118
+664,8,Varco Petroglifari,664,6,118
+664,9,Ambrette Gate,664,6,118
+664,11,コウジンゲート,664,6,118
+665,1,ミアレゲート,665,6,120
+665,3,미르게이트,665,6,120
+665,5,Porte d’Illumis,665,6,120
+665,6,Illumina-Tor,665,6,120
+665,7,Acceso a Luminalia,665,6,120
+665,8,Varco Luminopoli,665,6,120
+665,9,Lumiose Gate,665,6,120
+665,11,ミアレゲート,665,6,120
+666,1,シャラゲート,666,6,122
+666,3,사라게이트,666,6,122
+666,5,Porte de Yantreizh,666,6,122
+666,6,Yantara-Tor,666,6,122
+666,7,Acceso a Yantra,666,6,122
+666,8,Varco Yantaropoli,666,6,122
+666,9,Shalour Gate,666,6,122
+666,11,シャラゲート,666,6,122
+667,1,ヒヨクゲート,667,6,124
+667,3,비익게이트,667,6,124
+667,5,Porte de P. Tempères,667,6,124
+667,6,Tempera-Tor,667,6,124
+667,7,Acceso a Témpera,667,6,124
+667,8,Varco Temperopoli,667,6,124
+667,9,Coumarine Gate,667,6,124
+667,11,ヒヨクゲート,667,6,124
+668,1,クノエゲート,668,6,126
+668,3,후늬게이트,668,6,126
+668,5,Porte de Romant,668,6,126
+668,6,Romantia-Tor,668,6,126
+668,7,Acceso a Romantis,668,6,126
+668,8,Varco Romantopoli,668,6,126
+668,9,Laverre Gate,668,6,126
+668,11,クノエゲート,668,6,126
+669,1,ヒャッコクゲート,669,6,128
+669,3,향전게이트,669,6,128
+669,5,Porte de Flusselles,669,6,128
+669,6,Fluxia-Tor,669,6,128
+669,7,Acceso a Fluxus,669,6,128
+669,8,Varco Fluxopoli,669,6,128
+669,9,Anistar Gate,669,6,128
+669,11,ヒャッコクゲート,669,6,128
+670,1,エイセツゲート,670,6,130
+670,3,이설게이트,670,6,130
+670,5,Porte d’Auffrac,670,6,130
+670,6,Fractalia-Tor,670,6,130
+670,7,Acceso a Fractal,670,6,130
+670,8,Varco Fractalopoli,670,6,130
+670,9,Snowbelle Gate,670,6,130
+670,11,エイセツゲート,670,6,130
+671,1,かがやきのどうくつ,671,6,132
+671,3,반짝임의 동굴,671,6,132
+671,5,Grotte Étincelante,671,6,132
+671,6,Leuchthöhle,671,6,132
+671,7,Cueva Brillante,671,6,132
+671,8,Grotta dei Bagliori,671,6,132
+671,9,Glittering Cave,671,6,132
+671,11,輝きの洞窟,671,6,132
+672,1,じつなぎのどうけつ,672,6,134
+672,3,땅이음의 동굴,672,6,134
+672,5,Cave Connecterre,672,6,134
+672,6,Geolinkhöhle,672,6,134
+672,7,Gruta Tierraunida,672,6,134
+672,8,Grotta Trait d’Union,672,6,134
+672,9,Connecting Cave,672,6,134
+672,11,地つなぎの洞穴,672,6,134
+673,1,ズバットたちのすみか,673,6,135
+673,3,주뱃들의 소굴,673,6,135
+673,5,Antre Nosferapti,673,6,135
+673,6,Zubat-Nest,673,6,135
+673,7,Escondrijo Zubat,673,6,135
+673,8,Tana degli Zubat,673,6,135
+673,9,Zubat Roost,673,6,135
+673,11,ズバットたちのすみか,673,6,135
+674,1,カロスはつでんしょ,674,6,136
+674,3,칼로스발전소,674,6,136
+674,5,Centrale de Kalos,674,6,136
+674,6,Kalos-Kraftwerk,674,6,136
+674,7,Central de Kalos,674,6,136
+674,8,Centrale di Kalos,674,6,136
+674,9,Kalos Power Plant,674,6,136
+674,11,カロス発電所,674,6,136
+675,1,フレアだんひみつきち,675,6,138
+675,3,플레어단 비밀기지,675,6,138
+675,5,Repaire Team Flare,675,6,138
+675,6,Flare-Geheimbasis,675,6,138
+675,7,Guarida Team Flare,675,6,138
+675,8,Covo del Team Flare,675,6,138
+675,9,Team Flare Secret HQ,675,6,138
+675,11,フレア団秘密基地,675,6,138
+676,1,ついのどうくつ,676,6,140
+676,3,끝의 동굴,676,6,140
+676,5,Grotte Coda,676,6,140
+676,6,Omega-Höhle,676,6,140
+676,7,Cueva Desenlace,676,6,140
+676,8,Grotta Climax,676,6,140
+676,9,Terminus Cave,676,6,140
+676,11,終の洞窟,676,6,140
+677,1,あれはてホテル,677,6,142
+677,3,황폐해진 호텔,677,6,142
+677,5,Hôtel Désolation,677,6,142
+677,6,Hotelruine,677,6,142
+677,7,Hotel Desolación,677,6,142
+677,8,Albergo Diroccato,677,6,142
+677,9,Lost Hotel,677,6,142
+677,11,荒れ果てホテル,677,6,142
+678,1,うつろのま,678,6,144
+678,3,공허의 방,678,6,144
+678,5,Chambre Néant,678,6,144
+678,6,Kammer der Leere,678,6,144
+678,7,Estancia Vacua,678,6,144
+678,8,Stanza Vacua,678,6,144
+678,9,Chamber of Emptiness,678,6,144
+678,11,空ろの間,678,6,144
+679,1,わだつみのあな,679,6,146
+679,3,해신의 굴,679,6,146
+679,5,Antre Néréen,679,6,146
+679,6,Meerestitanenhöhle,679,6,146
+679,7,Cueva Talasia,679,6,146
+679,8,Antro Talassico,679,6,146
+679,9,Sea Spirit’s Den,679,6,146
+679,11,海神の穴,679,6,146
+680,1,フレンドサファリ,680,6,148
+680,3,프렌드사파리,680,6,148
+680,5,Safari des Amis,680,6,148
+680,6,Kontaktsafari,680,6,148
+680,7,Safari Amistad,680,6,148
+680,8,Safari Amici,680,6,148
+680,9,Friend Safari,680,6,148
+680,11,フレンドサファリ,680,6,148
+681,1,かえんのま,681,6,150
+681,3,화염의 방,681,6,150
+681,5,Chambre du Brasier,681,6,150
+681,6,Flammen-Saal,681,6,150
+681,7,Sala de las Llamas,681,6,150
+681,8,Sala delle Fiamme,681,6,150
+681,9,Blazing Chamber,681,6,150
+681,11,火炎の間,681,6,150
+682,1,すいもんのま,682,6,152
+682,3,수문의 방,682,6,152
+682,5,Chambre du Barrage,682,6,152
+682,6,Schleusen-Saal,682,6,152
+682,7,Sala de la Esclusa,682,6,152
+682,8,Sala delle Chiuse,682,6,152
+682,9,Flood Chamber,682,6,152
+682,11,水門の間,682,6,152
+683,1,こうてつのま,683,6,154
+683,3,무쇠의 방,683,6,154
+683,5,Chambre de l’Alliage,683,6,154
+683,6,Rüstungs-Saal,683,6,154
+683,7,Sala del Metal,683,6,154
+683,8,Sala del Metallo,683,6,154
+683,9,Ironworks Chamber,683,6,154
+683,11,鋼鉄の間,683,6,154
+684,1,りゅうしょうのま,684,6,156
+684,3,용문양의 방,684,6,156
+684,5,Chambre de la Guivre,684,6,156
+684,6,Draco-Saal,684,6,156
+684,7,Sala del Draco,684,6,156
+684,8,Sala del Dragone,684,6,156
+684,9,Dragonmark Chamber,684,6,156
+684,11,竜章の間,684,6,156
+685,1,ひかりのま,685,6,158
+685,3,빛의 방,685,6,158
+685,5,Chambre de l’Éclat,685,6,158
+685,6,Licht-Saal,685,6,158
+685,7,Sala de la Luz,685,6,158
+685,8,Sala della Luce,685,6,158
+685,9,Radiant Chamber,685,6,158
+685,11,光の間,685,6,158
+686,1,ポケモンリーグゲート,686,6,160
+686,3,포켓몬리그 게이트,686,6,160
+686,5,Porte de la Ligue,686,6,160
+686,6,Tor zur Pokémon Liga,686,6,160
+686,7,Acceso Liga Pokémon,686,6,160
+686,8,Varco Lega Pokémon,686,6,160
+686,9,Pokémon League Gate,686,6,160
+686,11,ポケモンリーグゲート,686,6,160
+687,1,ミアレステーション,687,6,162
+687,3,미르 스테이션,687,6,162
+687,5,Gare d’Illumis,687,6,162
+687,6,Bahnhof von Illumina,687,6,162
+687,7,Estación Luminalia,687,6,162
+687,8,Stazione Luminopoli,687,6,162
+687,9,Lumiose Station,687,6,162
+687,11,ミアレステーション,687,6,162
+688,1,キナンステーション,688,6,164
+688,3,기남 스테이션,688,6,164
+688,5,Gare de Batisques,688,6,164
+688,6,Bahnhof von Batika,688,6,164
+688,7,Estación Batik,688,6,164
+688,8,Stazione Batikopoli,688,6,164
+688,9,Kiloude Station,688,6,164
+688,11,キナンステーション,688,6,164
+689,1,コウジンすいぞくかん,689,6,166
+689,3,가라 수족관,689,6,166
+689,5,Aquarium R. s/Gliffe,689,6,166
+689,6,Petrophia-Aquarium,689,6,166
+689,7,Acuario Petroglifo,689,6,166
+689,8,Acquario,689,6,166
+689,9,Ambrette Aquarium,689,6,166
+689,11,コウジン水族館,689,6,166
+690,1,ななしのどうくつ,690,6,168
+690,3,이름없는 동굴,690,6,168
+690,5,Grotte Inconnue,690,6,168
+690,6,Geheimdungeon,690,6,168
+690,7,Mazmorra Rara,690,6,168
+690,8,Grotta Ignota,690,6,168
+690,9,Unknown Dungeon,690,6,168
+690,11,ななしの洞窟,690,6,168

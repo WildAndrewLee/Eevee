@@ -1,123 +1,32 @@
-function get_forms(id){
-    for(var n = 0; n < FORMS.length; n++){
-        var pokemon = FORMS[n];
-
-        if(pokemon[0] === id){
-            var forms = [];
-
-            Object.getOwnPropertyNames(pokemon[1]).forEach(function(ele){
-                forms.push([pokemon[1][ele], ele]);
-            });
-
-            return forms;
-        }
-    }
-
-    return null;
-}
-
-function get_abilities(id){
-    var abilities = ABILITY_MAP[id];
-    var to_return = [];
-
-    abilities.forEach(function(ele, i){
-        to_return.push([ele[0], ABILITIES[ele[0] - 1]]);
-    });
-
-    return to_return;
-}
-
-function get_ability_slot(id, ability){
-    var abilities = ABILITY_MAP[id];
-
-    for(var n = 0; n < abilities.length; n++){
-        if(abilities[n][0] === ability){
-            return abilities[n][1];
-        }
-    }
-
-    return null;
-}
-
-function get_max_exp(id){
-    var exp_curve = EXP_MAP[GROWTH_MAP[id] - 1];
-    return exp_curve[exp_curve.length - 1];
-}
-
-function get_exp_for_level(id, lvl){
-    var exp_curve = EXP_MAP[GROWTH_MAP[id] - 1];
-    return exp_curve[lvl - 1];
-}
-
-function get_level_from_exp(id, exp){
-    var exp_curve = EXP_MAP[GROWTH_MAP[id] - 1];
-
-    for(var n = 0; n < exp_curve.length; n++){
-        if(exp_curve[n] > exp){
-            return n;
-        }
-    }
-
-    return 100;
-}
-
-function is_genderless(id){
-    return GENDER_MAP[id] === -1;
-}
-
-function is_only_female(id){
-    // Gender map is an array of
-    // chances for a pokemon to be
-    // female. A rate of 8 means
-    // a pokemon is only female.
-    return GENDER_MAP[id] === 8;
-}
-
-function get_natures_as_options(){
-    var to_return = [];
-
-    NATURES.forEach(function(ele, i){
-        to_return.push([i, ele])
-    });
-
-    return to_return;
-}
-
-var NATURE_OPTIONS = get_natures_as_options();
-
-NATURE_OPTIONS.sort(function(a, b){
-    return a[1].localeCompare(b[1]);
-});
-
 function Pokemon(id){
     this.id = id;
-
-    // Zero index the ID.
-    id--;
 
     /**
      * Basic Info
      */
 
-    this.name = POKEMON[id];
+    this.name = null;
     this.nickname = null;
 
-    this.valid_moves = MOVE_MAP[id];
-    this.valid_abilities = get_abilities(id);
-    this.valid_forms = get_forms(this.id);
+    this.valid_moves = null;
+    this.valid_abilities = null;
+    this.valid_natures = null;
+    this.valid_forms = null;
 
-    this.ability = this.valid_abilities[0][0];
+    this.ability = 1;
+    this.nature = 1;
 
+    this.exp_curve = null;
     this.level = 1;
     this.exp = 0;
     this.held_item = 0;
     this.happiness = 0;
-    this.form = this.valid_forms ? 0 : null;
+    this.form = null;
 
     this.language = 2; // Default to English.
     this.origin = 7; // Default to HG.
 
-    this.gender = is_genderless(id) ? GENDERLESS : is_only_female(id) ? FEMALE : MALE;
+    this.gender = -1; // Default to genderless.
 
     this.egg = false;
     this.shiny = false;
@@ -148,12 +57,72 @@ function Pokemon(id){
     /**
      * Misc
      */
+}
 
+Pokemon.MALE = 1;
+Pokemon.FEMALE = 2;
+Pokemon.GENDERLESS = 3;
+
+Pokemon.prototype.load = function(){
+    var that = this;
+
+    return API.get_pokemon_info(this.id).then(function(data){
+        that.name = data.name;
+        that.valid_forms = data.forms;
+        that.valid_moves = data.moves;
+        that.valid_abilities = data.abilities;
+        that.exp_curve = data.growth;
+        that.typing = data.typing;
+        that.valid_gender = data.gender;
+    });
+};
+
+Pokemon.prototype.exp_for_level = function(lvl){
+    return this.exp_curve[lvl - 1];
+};
+
+Pokemon.prototype.level_from_exp = function(exp){
+    if(exp < 0) return 1;
+    
+    for(var n = 0; n < this.exp_curve.length; n++){
+        if(this.exp_curve[n] > exp){
+            return n;
+        }
+    }
+
+    return 100;
+};
+
+Pokemon.prototype.is_genderless = function(){
+    return !this.valid_gender.male && !this.valid_gender.female;
+};
+
+Pokemon.prototype.render = function(){
     /**
-     * DOM Elements
+     * DOM Elements for Main
      */
 
     var that = this;
+
+    var nature_options = alpha_order_options(options_from_obj(API.NATURES));
+    var item_options = alpha_order_options(options_from_obj(API.ITEMS));
+    var ability_options = alpha_order_options(options_from_obj(this.valid_abilities));
+    var form_options = [[0, 'Not Available']];
+    var language_options = alpha_order_options(options_from_obj(API.LANGUAGES));
+    var hometown_options = alpha_order_options(options_from_obj(API.HOMETOWNS));
+
+    if(this.valid_forms){
+        form_options = alpha_order_options(options_from_obj(this.valid_forms));
+    }
+
+    this.$thumbnail = $('<img>').attr('src', '/img/pokemon/' + this.id + '.png');
+    this.$typing = $('<div>').addClass('typing');
+
+    this.typing.forEach(function(type){
+        that.$typing.append(
+            $('<span>').addClass('type').addClass(type).text(normalize(type))
+        );
+    });
 
     this.$name = Field({
         label: 'Pokémon Name',
@@ -162,24 +131,21 @@ function Pokemon(id){
     });
 
     this.$nickname = Field({
-        label: 'Nickname'
-    }).change(function(v){
-        that.nickname = v;
+        label: 'Nickname',
+        value: this.nickname
     });
 
     this.$nature = Field({
         label: 'Nature',
         type: 'select',
-        options: NATURE_OPTIONS,
-        selected: 1
-    }).change(function(v){
-        that.nature = v;
+        options: nature_options,
+        selected: this.nature
     });
 
     this.$ability = Field({
         label: 'Ability',
         type: 'select',
-        options: this.valid_abilities,
+        options: ability_options,
         selected: this.ability
     }).change(function(v){
         that.ability = v;
@@ -192,30 +158,24 @@ function Pokemon(id){
         max: 100,
         value: this.level
     }).change(function(v){
-        that.level = v;
-        that.exp = get_exp_for_level(id, v);
-        that.$exp.val(that.exp);
+        that.$exp.val(that.exp_for_level(v));
     });
 
     this.$exp = Field({
         label: 'Experience',
         type: 'number',
         min: 0,
-        max: get_max_exp(this.id),
+        max: this.exp_curve[this.exp_curve.length - 1],
         value: this.exp
     }).change(function(v){
-        that.exp = v;
-        that.level = get_level_from_exp(id, v);
-        that.$level.val(that.level);
+        that.$level.val(that.level_from_exp(v));
     });
 
     this.$held = Field({
         label: 'Held Item',
         type: 'select',
-        options: ITEMS,
+        options: item_options,
         selected: this.held_item
-    }).change(function(v){
-        that.held_item = v;
     });
 
     this.$happiness = Field({
@@ -224,8 +184,6 @@ function Pokemon(id){
         min: 0,
         max: 255,
         value: this.happiness,
-    }).change(function(v){
-        that.happiness = v;
     });
 
     this.$form = Field({
@@ -233,56 +191,44 @@ function Pokemon(id){
         type: 'select',
         disabled: !this.valid_forms,
         selected: this.form === null ? 0 : this.form,
-        options: this.valid_forms || [[0, 'Not Available']]
-    }).change(function(v){
-        that.form = v;
+        options: form_options
     });
 
     this.$lang = Field({
         label: 'Language',
         type: 'select',
         selected: this.language,
-        options: LANGUAGE
-    }).change(function(v){
-        that.language = v;
+        options: language_options
     });
 
     this.$origin = Field({
         label: 'Origin',
         type: 'select',
         selected: this.origin,
-        options: ORIGIN
-    }).change(function(v){
-        that.origin = v;
+        options: hometown_options
     });
 
     this.$gender = Field({
         label: 'Gender',
         type: 'select',
         selected: this.gender,
-        options: is_genderless(id) ? [[GENDERLESS, 'Genderless']] : [
-            [MALE, 'Male'],
-            [FEMALE, 'Female']
+        options: this.is_genderless() ? [[Pokemon.GENDERLESS, 'Genderless']] : [
+            [Pokemon.MALE, 'Male'],
+            [Pokemon.FEMALE, 'Female']
         ],
-        disabled: is_genderless(id)
-    }).change(function(v){
-        that.gender = v;
+        disabled: this.is_genderless()
     });
 
     this.$egg = Field({
         label: 'Egg',
         type: 'check',
         checked: this.egg
-    }).change(function(v){
-        that.egg = v;
     });
 
     this.$shiny = Field({
         label: 'Shiny',
         type: 'check',
         checked: this.shiny
-    }).change(function(v){
-        that.shiny = v;
     });
 
     this.$pokerus1 = Field({
@@ -291,8 +237,6 @@ function Pokemon(id){
         min: 0,
         max: 4,
         value: this.pokerus1
-    }).change(function(v){
-        that.pokerus1 = v;
     });
 
     this.$pokerus2 = Field({
@@ -301,37 +245,61 @@ function Pokemon(id){
         min: 0,
         max: 4,
         value: this.pokerus2
-    }).change(function(v){
-        that.pokerus2 = v;
     });
 
-    $('#test').append(this.$name.render());
-    $('#test').append(this.$nickname.render());
-    $('#test').append(this.$nature.render());
-    $('#test').append(this.$ability.render());
+    var $main_fields = $('<aside>').addClass('grow')
+        .append(this.$name.render())
+        .append(this.$nickname.render())
+        .append(this.$nature.render())
+        .append(this.$ability.render())
+        .append(
+            $('<div>').addClass('input-grouped')
+                .append(this.$level.render())
+                .append(this.$exp.render())
+        )
+        .append(this.$held.render())
+        .append(this.$happiness.render())
+        .append(this.$form.render())
+        .append(this.$lang.render())
+        .append(this.$origin.render())
+        .append(this.$gender.render())
+        .append(
+            $('<div>').addClass('input-grouped other-group')
+                .append(this.$egg.render())
+                .append(this.$shiny.render())
+                .append(this.$pokerus1.render())
+                .append(this.$pokerus2.render())
+        );
 
-    $('#test').append(
-        $('<div>').addClass('input-grouped')
-            .append(this.$level.render())
-            .append(this.$exp.render())
+    /**
+     * General Editor
+     */
+
+    this.$editor = $('<section>').addClass('editor').append(
+        $('<nav>').append(
+            $('<span>').addClass('main-button selected').text('Main')
+        ).append(
+            $('<span>').addClass('met-button').text('Met')
+        ).append(
+            $('<span>').addClass('stats-button').text('Stats')
+        ).append(
+            $('<span>').addClass('moves-button').text('Moves')
+        ).append(
+            $('<span>').addClass('ribbons-button').text('Ribbons')
+        ).append(
+            $('<span>').addClass('misc-button').text('Misc')
+        ).append(
+            $('<span>').addClass('choose-again-button').text('Start Over')
+        ).append(
+            $('<span>').addClass('save-button').text('Save')
+        )
+    ).append(
+        $('<section>').addClass('fields main').append(
+            $('<aside>').addClass('row').append(
+                $('<figure>').append(this.$thumbnail).append(this.$typing)
+            ).append($main_fields)
+        )
     );
 
-    $('#test').append(this.$held.render());
-    $('#test').append(this.$happiness.render());
-    $('#test').append(this.$form.render());
-    $('#test').append(this.$lang.render());
-    $('#test').append(this.$origin.render());
-    $('#test').append(this.$gender.render());
-
-    $('#test').append(
-        $('<div>').addClass('input-grouped other-group')
-            .append(this.$egg.render())
-            .append(this.$shiny.render())
-            .append(this.$pokerus1.render())
-            .append(this.$pokerus2.render())
-    );
-}
-
-Pokemon.prototype.render = function(){
-
+    return this.$editor;
 };
