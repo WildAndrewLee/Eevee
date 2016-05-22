@@ -28,7 +28,7 @@ FieldTemplate.prototype.change = function(fn){
     var that = this;
 
     $(this.field).change(function(){
-        fn.call(that, ($(this).val()));
+        fn.call(that, $(this).val());
     });
 
     return this;
@@ -36,12 +36,11 @@ FieldTemplate.prototype.change = function(fn){
 
 FieldTemplate.prototype.val = function(v){
     if(v !== undefined){
-        this.value = v;
         $(this.field).val(v);
         return this;
     }
     else{
-        return this.value;
+        return $(this.field).val();
     }
 };
 
@@ -148,6 +147,10 @@ function CheckField(options){
     FieldTemplate.call(this, options);
     this.field = $('<input>');
     this.checked = options.checked || false;
+
+    this.change(function(v){
+        this.value = $(this.field).val();
+    });
 }
 
 CheckField.prototype = new FieldTemplate();
