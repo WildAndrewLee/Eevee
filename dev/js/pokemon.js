@@ -146,7 +146,7 @@ Pokemon.prototype.render = function(){
         label: 'Ability',
         type: 'select',
         options: ability_options,
-        selected: this.ability
+        selected: ability_options[0][0]
     }).change(function(v){
         that.ability = v;
     });

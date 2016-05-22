@@ -6,7 +6,7 @@ $(function(){
 
     // Dewgong
     API.prepare().then(function(){
-        var dewgong = new Pokemon(386);
+        var dewgong = new Pokemon(229);
         dewgong.load().then(function(){
             $('body').append(dewgong.render());
             window.dewgong = dewgong;
