@@ -39,7 +39,7 @@ input[type=radio] {
     position: fixed;
     top: 0px;
     left: 0px;
-    transition: 0.1s width;
+    transition: 0.2s width;
     width: 0%;
     height: 2px;
     background: #3088f0;
