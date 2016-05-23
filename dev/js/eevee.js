@@ -45,7 +45,7 @@ var eevee = {
     },
     setup: function(){
         eevee.cache.setup();
-        return eevee.load_thumbnails().then(API.prepare)
+        return eevee.load_thumbnails().then(API.prepare);
     },
     reset: function(){
         $('.editor').remove();

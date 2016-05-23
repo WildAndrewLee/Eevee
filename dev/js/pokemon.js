@@ -14,7 +14,7 @@ function Pokemon(id){
     this.valid_forms = null;
 
     this.ability = 1;
-    this.nature = 1;
+    this.nature = 0;
 
     this.exp_curve = null;
     this.level = 1;
@@ -51,6 +51,24 @@ function Pokemon(id){
      * Stats
      */
 
+    this.iv = {
+        hp: 31,
+        att: 31,
+        def: 31,
+        special_att: 31,
+        special_def: 31,
+        spd: 31
+    };
+
+    this.ev = {
+        hp: 0,
+        att: 0,
+        def: 0,
+        special_att: 0,
+        special_def: 0,
+        spd: 0
+    };
+
     /**
      * Moves
      */
@@ -59,6 +77,11 @@ function Pokemon(id){
     this.move2 = null;
     this.move3 = null;
     this.move4 = null;
+
+    this.ppup1 = 0;
+    this.ppup2 = 0;
+    this.ppup3 = 0;
+    this.ppup4 = 0;
 
     /**
      * Ribbons
@@ -69,9 +92,11 @@ function Pokemon(id){
      */
 }
 
-Pokemon.MALE = 1;
-Pokemon.FEMALE = 2;
-Pokemon.GENDERLESS = 3;
+Pokemon.MALE = 0x2; // Leave last bit as 0 for ability.
+Pokemon.FEMALE = 0xFC; // Leave last bit as 0 for ability.
+Pokemon.GENDERLESS = 0xFF;
+Pokemon.MALE_ONLY = 0x0;
+Pokemon.FEMALE_ONLY = 0xFE;
 
 Pokemon.prototype.load = function(){
     function do_stuff(data){
@@ -126,11 +151,11 @@ Pokemon.prototype.is_genderless = function(){
 
 Pokemon.prototype.only_male = function(){
     return this.valid_gender.male && !this.valid_gender.female;
-}
+};
 
 Pokemon.prototype.only_female = function(){
     return !this.valid_gender.male && this.valid_gender.female;
-}
+};
 
 Pokemon.prototype.render = function(){
     /**
@@ -148,6 +173,7 @@ Pokemon.prototype.render = function(){
     var location_options = alpha_order_options(options_from_obj(API.LOCATIONS));
     var ball_options = alpha_order_options(options_from_obj(API.POKEBALLS));
     var encounter_options = alpha_order_options(options_from_obj(API.ENCOUNTER_OPTIONS));
+    var move_options = alpha_order_options(options_from_obj(this.valid_moves));
 
     if(this.valid_forms){
         form_options = alpha_order_options(options_from_obj(this.valid_forms));
@@ -262,21 +288,15 @@ Pokemon.prototype.render = function(){
         type: 'check',
         checked: this.egg
     }).change(function(v){
-        if(v){
-            that.$met_egg.disable();
-            that.$egg_location.disable();
-            that.$egg_date.disable();
-        }else{
-            that.$met_egg.enable();
-            that.$egg_location.enable();
-            that.$egg_date.enable();
-        }
+        if(v) that.$met_egg.disable();
+        else that.$met_egg.enable();
     });
 
     this.$shiny = Field({
         label: 'Shiny',
         type: 'check',
-        checked: this.shiny
+        checked: this.shiny,
+        disabled: true
     });
 
     this.$pokerus1 = Field({
@@ -352,7 +372,7 @@ Pokemon.prototype.render = function(){
     });
 
     this.$encounter = Field({
-        label: 'Encounter',
+        label: 'Encounter Type',
         type: 'select',
         selected: this.encounter,
         options: encounter_options
@@ -370,8 +390,16 @@ Pokemon.prototype.render = function(){
         checked: this.met_egg,
         disabled: this.egg
     }).change(function(v){
-        if(v) that.$egg.disable();
-        else that.$egg.enable();
+        if(v){
+            that.$egg.disable();
+            that.$egg_location.enable();
+            that.$egg_date.enable();
+        }
+        else{
+            that.$egg.enable();
+            that.$egg_location.disable();
+            that.$egg_date.disable();
+        }
     });
 
     this.$egg_location = Field({
@@ -379,14 +407,14 @@ Pokemon.prototype.render = function(){
         type: 'select',
         options: location_options,
         value: this.egg_location,
-        disabled: !this.egg && this.met_egg
+        disabled: this.egg || !this.met_egg
     });
 
     this.$egg_date = Field({
         label: 'Hatch Date',
         type: 'date',
         value: this.egg_date,
-        disabled: !this.egg && this.met_egg
+        disabled: this.egg || !this.met_egg
     });
 
     var $met_fields = $('<aside>').addClass('fields met')
@@ -401,6 +429,238 @@ Pokemon.prototype.render = function(){
                         .append(this.$egg_date.render());
 
     /**
+     * Stat DOM Elements
+     */
+
+    function adjust_ev(v){
+        var values = [
+            that.$hp_ev.val(),
+            that.$att_ev.val(),
+            that.$def_ev.val(),
+            that.$special_att_ev.val(),
+            that.$special_def_ev.val(),
+            that.$spd_ev.val()
+        ];
+
+        var total = values.reduce(function(a, b){
+            return parseInt(a) + parseInt(b);
+        });
+
+        if(total <= 510) return;
+
+        var prev = total - v;
+        var allowed = 510 - prev;
+
+        this.val(allowed);
+    }
+
+    this.$hp_iv = Field({
+        label: 'HP',
+        type: 'number',
+        min: 0,
+        max: 31,
+        value: this.iv.hp
+    });
+
+    this.$att_iv = Field({
+        label: 'Attack',
+        type: 'number',
+        min: 0,
+        max: 31,
+        value: this.iv.att
+    });
+
+    this.$def_iv = Field({
+        label: 'Defense',
+        type: 'number',
+        min: 0,
+        max: 31,
+        value: this.iv.def
+    });
+
+    this.$special_att_iv = Field({
+        label: 'Sp.Atk',
+        type: 'number',
+        min: 0,
+        max: 31,
+        value: this.iv.special_att
+    });
+
+    this.$special_def_iv = Field({
+        label: 'Sp.Def',
+        type: 'number',
+        min: 0,
+        max: 31,
+        value: this.iv.special_def
+    });
+
+    this.$spd_iv = Field({
+        label: 'Speed',
+        type: 'number',
+        min: 0,
+        max: 31,
+        value: this.iv.spd
+    });
+
+    this.$hp_ev = Field({
+        label: 'HP',
+        type: 'number',
+        min: 0,
+        max: 252,
+        value: this.ev.hp
+    }).change(adjust_ev);
+
+    this.$att_ev = Field({
+        label: 'Attack',
+        type: 'number',
+        min: 0,
+        max: 252,
+        value: this.ev.att
+    }).change(adjust_ev);
+
+    this.$def_ev = Field({
+        label: 'Defense',
+        type: 'number',
+        min: 0,
+        max: 252,
+        value: this.ev.def
+    }).change(adjust_ev);
+
+    this.$special_att_ev = Field({
+        label: 'Sp.Atk',
+        type: 'number',
+        min: 0,
+        max: 252,
+        value: this.ev.special_att
+    }).change(adjust_ev);
+
+    this.$special_def_ev = Field({
+        label: 'Sp.Def',
+        type: 'number',
+        min: 0,
+        max: 252,
+        value: this.ev.special_def
+    }).change(adjust_ev);
+
+    this.$spd_ev = Field({
+        label: 'Speed',
+        type: 'number',
+        min: 0,
+        max: 252,
+        value: this.ev.spd
+    }).change(adjust_ev);
+
+    var $stat_fields = $('<aside>').addClass('fields stats')
+                        .append(
+                            $('<header>').append(
+                                $('<h3>').text('Individual Values')
+                            )
+                        )
+                        .append(this.$hp_iv.render())
+                        .append(this.$att_iv.render())
+                        .append(this.$def_iv.render())
+                        .append(this.$special_att_iv.render())
+                        .append(this.$special_def_iv.render())
+                        .append(this.$spd_iv.render())
+                        .append(
+                            $('<header>').append(
+                                $('<h3>').text('Effort Values')
+                            )
+                        )
+                        .append(this.$hp_ev.render())
+                        .append(this.$att_ev.render())
+                        .append(this.$def_ev.render())
+                        .append(this.$special_att_ev.render())
+                        .append(this.$special_def_ev.render())
+                        .append(this.$spd_ev.render());
+
+    /**
+     * Move DOM Elements
+     */
+
+    this.$move1 = Field({
+        label: 'Move 1',
+        type: 'select',
+        selected: this.move1,
+        options: move_options
+    });
+
+    this.$move2 = Field({
+        label: 'Move 2',
+        type: 'select',
+        selected: this.move2,
+        options: move_options
+    });
+
+    this.$move3 = Field({
+        label: 'Move 3',
+        type: 'select',
+        selected: this.move3,
+        options: move_options
+    });
+
+    this.$move4 = Field({
+        label: 'Move 4',
+        type: 'select',
+        selected: this.move4,
+        options: move_options
+    });
+
+    this.$ppup1 = Field({
+        label: 'PP Up',
+        type: 'number',
+        min: 0,
+        max: 3,
+        value: this.ppup1
+    });
+
+    this.$ppup2 = Field({
+        label: 'PP Up',
+        type: 'number',
+        min: 0,
+        max: 3,
+        value: this.ppup2
+    });
+
+    this.$ppup3 = Field({
+        label: 'PP Up',
+        type: 'number',
+        min: 0,
+        max: 3,
+        value: this.ppup3
+    });
+
+    this.$ppup4 = Field({
+        label: 'PP Up',
+        type: 'number',
+        min: 0,
+        max: 3,
+        value: this.ppup4
+    });
+
+    var $move_fields = $('<aside>').addClass('fields moves')
+                        .append(
+                            $('<div>').addClass('input-grouped')
+                                .append(this.$move1.render())
+                                .append(this.$ppup1.render())
+                        )
+                        .append(
+                            $('<div>').addClass('input-grouped')
+                                .append(this.$move2.render())
+                                .append(this.$ppup2.render())
+                        )
+                        .append(
+                            $('<div>').addClass('input-grouped')
+                                .append(this.$move3.render())
+                                .append(this.$ppup3.render())
+                        )
+                        .append(
+                            $('<div>').addClass('input-grouped')
+                                .append(this.$move4.render())
+                                .append(this.$ppup4.render())
+                        );
+
+    /**
      * General Editor
      */
 
@@ -409,7 +669,7 @@ Pokemon.prototype.render = function(){
             $('<span>').addClass('main-button selected').text('Main')
                 .click(function(){
                     that.$editor.find('.fields').hide();
-                    $('.fields.main').show();
+                    $main_fields.show();
 
                     that.$editor.find('nav span').removeClass('selected');
                     $(this).addClass('selected');
@@ -418,15 +678,29 @@ Pokemon.prototype.render = function(){
             $('<span>').addClass('met-button').text('Met')
                 .click(function(){
                     that.$editor.find('.fields').hide();
-                    $('.met.fields').show();
+                    $met_fields.show();
 
                     that.$editor.find('nav span').removeClass('selected');
                     $(this).addClass('selected');
                 })
         ).append(
             $('<span>').addClass('stats-button').text('Stats')
+                .click(function(){
+                    that.$editor.find('.fields').hide();
+                    $stat_fields.show();
+
+                    that.$editor.find('nav span').removeClass('selected');
+                    $(this).addClass('selected');
+                })
         ).append(
             $('<span>').addClass('moves-button').text('Moves')
+                .click(function(){
+                    that.$editor.find('.fields').hide();
+                    $move_fields.show();
+
+                    that.$editor.find('nav span').removeClass('selected');
+                    $(this).addClass('selected');
+                })
         ).append(
             $('<span>').addClass('ribbons-button').text('Ribbons')
         ).append(
@@ -442,6 +716,8 @@ Pokemon.prototype.render = function(){
         )
         .append($main_fields)
         .append($met_fields)
+        .append($stat_fields)
+        .append($move_fields)
     );
 
     return this.$editor;

@@ -1,13 +1,14 @@
 var cache = {
-    _version: 1,
+    _version: 1.1,
     _gen_key: function(k){
         return 'v' + cache._version + '_' + k;
     },
     setup: function(){
+        // Delete old cache values.
         Object.keys(localStorage).forEach(function(k){
-            var version = k.match(/^v(\d+)_/);
+            var version = k.match(/^v(\d+(\.\d+)*)_/);
 
-            if(!version || parseInt(version[1]) !== cache._version){
+            if(!version || parseFloat(version[1]) !== cache._version){
                 delete localStorage[k];
             }
         });

@@ -20,10 +20,9 @@ body {
     margin: 0px auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: 400;
     border-bottom: 1px solid #dddddd;
-    padding-bottom: 0.25em;
     margin-bottom: 0.5em;
 }
 
@@ -40,10 +39,12 @@ body > header {
     border-bottom: 1px solid #dddddd;
     box-shadow: 0px 1px 5px #f7f7f7;
     z-index: 100;
+    padding-bottom: 0.5em;
 }
 
 body > header h1 {
     border: none;
+    display: inline-block
 }
 
 figure {
@@ -99,6 +100,7 @@ input[type=checkbox] {
     box-sizing: border-box;
     width: calc(100% / 6);
     display: inline-block;
+    text-align: center;
 }
 
 #thumbnails img {
@@ -106,6 +108,12 @@ input[type=checkbox] {
     border-radius: 3px;
     margin-bottom: 0.5em;
     cursor: pointer;
+    transition: 0.3s opacity ease-in-out;
+    opacity: 0.7;
+}
+
+#thumbnails img:hover {
+    opacity: 1.0;
 }
 
 #search {
@@ -125,7 +133,10 @@ input[type=checkbox] {
     font-size: 11px;
     border-radius: 3px;
     text-shadow: 1px 1px 1px #444444;
-    margin-right: 0.25em;
+}
+
+.type + .type {
+    margin-left: 0.25em;
 }
 
 .normal {

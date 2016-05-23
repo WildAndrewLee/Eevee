@@ -140,6 +140,11 @@ NumberField.prototype.render = function(){
         .wrap('<div class="input-wrapper"></div>').parent();
 };
 
+NumberField.prototype.val = function(v){
+    if(v === undefined) return parseInt(this.field.val() || 0);
+    else this.field.val(v);
+};
+
 function CheckField(options){
     FieldTemplate.call(this, options);
     this.field = $('<input>');
@@ -166,10 +171,19 @@ CheckField.prototype.change = function(fn){
     var that = this;
 
     $(this.field).change(function(){
-        fn.call(that, $(this).prop('checked'));
+        fn.call(that, that.check());
     });
 
     return this;
+};
+
+CheckField.prototype.check = function(b){
+    if(b !== undefined){
+        $(this.field).prop('checked', b);
+    }
+    else{
+        return $(this.field).prop('checked');
+    }
 };
 
 function DateField(options){

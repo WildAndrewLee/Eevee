@@ -8,7 +8,7 @@ var crypto = {
         checksum = 0;
 
         for(var n = 0; n < data.length; n += 2){
-            checksum += swap_endian(buff_to_num([data[n], data[n + 1]));
+            checksum += swap_endian(buff_to_num([data[n], data[n + 1]]));
         }
 
         checksum &= 0xFFFF;

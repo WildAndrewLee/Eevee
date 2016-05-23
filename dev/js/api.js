@@ -25,7 +25,7 @@ var API = {
 
             getJSON('/api/items', function(data){
                 API.ITEMS = data;
-                resolve(data)
+                resolve(data);
             });
         });
     },
@@ -35,7 +35,7 @@ var API = {
 
             getJSON('/api/languages', function(data){
                 API.LANGUAGES = data;
-                resolve(data)
+                resolve(data);
             });
         });
     },
@@ -45,7 +45,7 @@ var API = {
 
             getJSON('/api/hometowns', function(data){
                 API.HOMETOWNS = data;
-                resolve(data)
+                resolve(data);
             });
         });
     },
@@ -55,7 +55,7 @@ var API = {
 
             getJSON('/api/locations', function(data){
                 API.LOCATIONS = data;
-                resolve(data)
+                resolve(data);
             });
         });
     },
@@ -65,7 +65,7 @@ var API = {
 
             getJSON('/api/pokeballs', function(data){
                 API.POKEBALLS = data;
-                resolve(data)
+                resolve(data);
             });
         });
     },
@@ -75,7 +75,7 @@ var API = {
 
             getJSON('/api/encounters', function(data){
                 API.ENCOUNTER_OPTIONS = data;
-                resolve(data)
+                resolve(data);
             });
         });
     },

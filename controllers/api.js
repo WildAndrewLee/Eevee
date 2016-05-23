@@ -27,8 +27,8 @@ function get_abilities(id){
 
             rows.forEach((row) => {
                 r[row.name] = {
-                    id: row.id
-                    // slot: row.slot
+                    id: row.id,
+                    slot: row.slot
                 };
             });
 

@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	var grunt_options = {
 		jshint: {
-			files: ['dev/js/field.js', 'dev/js/script.js'],
+			files: ['dev/js/*.js'],
 			options: {
 				globals: {
 					jQuery: true
@@ -15,9 +15,10 @@ module.exports = function(grunt) {
                 },
 				files: {
                     'static/js/eevee.min.js': [
+                        'dev/js/lib/*.js',
                         'dev/js/jquery.disable.js',
-                        'dev/js/fuzzy.js',
                         'dev/js/util.js',
+                        'dev/js/crypto.js',
                         'dev/js/cache.js',
                         'dev/js/api.js',
                         'dev/js/field.js',
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: 'dev/js/*.js',
-				tasks: ['uglify']
+				tasks: ['jshint', 'uglify']
 			},
             css: {
                 files: 'dev/css/*.css',
