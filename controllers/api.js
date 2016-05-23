@@ -2,6 +2,22 @@ var db = require('db/db');
 var express = require('express');
 var router = express.Router();
 
+function get_pokemon(id){
+    return new Promise((resolve, reject) => {
+        db.query('SELECT * FROM pokemon', (err, rows) => {
+            if(err) return reject(err);
+
+            var r = [];
+
+            rows.forEach((row) => {
+                r.push(row.name);
+            });
+
+            resolve(r);
+        });
+    });
+}
+
 function get_abilities(id){
     return new Promise((resolve, reject) => {
         db.query('SELECT * FROM abilities JOIN pokemon_abilities ON abilities.id=pokemon_abilities.ability_id WHERE pokemon_abilities.pokemon_id=?', [id], (err, rows) => {
@@ -224,10 +240,39 @@ function get_locations(){
             var r = {};
 
             rows.forEach((row) => {
-                r[row.name] = {
-                    id: row.id,
-                    index: row.index
-                };
+                r[row.name] = row.index;
+            });
+
+            resolve(r);
+        });
+    })
+}
+
+function get_pokeballs(){
+    return new Promise((resolve, reject) => {
+        db.query('SELECT item_id, items.name FROM pokeballs JOIN items ON items.id=pokeballs.item_id', (err, rows) => {
+            if(err) return reject(err);
+
+            var r = {};
+
+            rows.forEach((row) => {
+                r[row.name] = row.item_id;
+            });
+
+            resolve(r);
+        });
+    })
+}
+
+function get_encounters(){
+    return new Promise((resolve, reject) => {
+        db.query('SELECT * FROM encounters', (err, rows) => {
+            if(err) return reject(err);
+
+            var r = {};
+
+            rows.forEach((row) => {
+                r[row.method] = row.repr;
             });
 
             resolve(r);
@@ -300,6 +345,14 @@ router.get('/locations', (req, res) => {
     get_locations().then(wrapper(res), err_handler(res));
 });
 
+router.get('/pokeballs', (req, res) => {
+    get_pokeballs().then(wrapper(res), err_handler(res));
+});
+
+router.get('/encounters', (req, res) => {
+    get_encounters().then(wrapper(res), err_handler(res));
+});
+
 router.get('/pokemon/:pokemon_id', (req, res) => {
     var id = req.params.pokemon_id;
 
@@ -327,6 +380,10 @@ router.get('/pokemon/:pokemon_id', (req, res) => {
             typing: r[6]
         });
     }, err_handler(res));
+});
+
+router.get('/pokemon', (req, res) => {
+    get_pokemon().then(wrapper(res), err_handler(res));
 });
 
 module.exports = router;

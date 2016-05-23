@@ -1,42 +1,25 @@
 $(function(){
-    function load_image(url){
-        return new Promise(function(resolve, reject){
-            var img = new Image();
+    eevee.setup().then(function(){
+        $('#search-input').keyup(function(){
+            if(!this.value.length) return $('#thumbnails figure').show();
 
-            var handler = function(){
-                img.removeEventListener('load', handler);
-                resolve(img);
-            };
+            $('#thumbnails figure').show();
 
-            img.addEventListener('load',handler);
+            var thumbnails = Array.prototype.slice.call($('#thumbnails img'));
 
-            img.src = url;
+            var res = fuzzy.filter(this.value, thumbnails, {
+                extract: function(ele){
+                    return $(ele).data('name');
+                }
+            });
+
+            $('#thumbnails figure').hide();
+
+            res.forEach(function(r){
+                $('#thumbnails figure').eq(r.index).show();
+            });
         });
-    }
 
-    function load_thumbnails(){
-        return new Promise(function(resolve, reject){
-            var loading = [];
-
-            for(var x = 1; x <= 493; x++){
-                loading.push(load_image('/img/pokemon/' + x + '.png'));
-            }
-
-            Promise.all(loading).then(function(images){
-                images.forEach(function(img, n){
-                    $('#thumbnails').append(
-                        $('<figure>').append(
-                            $(img).attr('id', 'number-' + (n + 1))
-                        )
-                    );
-                });
-
-                resolve();
-            }, reject);
-        });
-    }
-
-    load_thumbnails().then(API.prepare).then(function(){
         $('#loading').hide();
 
         $('#thumbnails img').click(function(){
@@ -44,7 +27,9 @@ $(function(){
             var poke = new Pokemon(id);
 
             poke.load().then(function(){
+                eevee._scrollTop = $(window).scrollTop();
                 $('#thumbnails').hide();
+                $('#search').hide();
                 $('body').append(poke.render());
             });
         });

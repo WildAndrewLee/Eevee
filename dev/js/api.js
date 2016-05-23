@@ -1,4 +1,9 @@
 var API = {
+    get_pokemon: function(){
+        return new Promise(function(resolve, reject){
+            getJSON('/api/pokemon', resolve);
+        });
+    },
     get_pokemon_info: function(id){
         return new Promise(function(resolve, reject){
             getJSON('/api/pokemon/' + id, resolve);
@@ -44,16 +49,51 @@ var API = {
             });
         });
     },
+    get_locations: function(){
+        return new Promise(function(resolve, reject){
+            if(API.LOCATIONS) return resolve(API.LOCATIONS);
+
+            getJSON('/api/locations', function(data){
+                API.LOCATIONS = data;
+                resolve(data)
+            });
+        });
+    },
+    get_pokeballs: function(){
+        return new Promise(function(resolve, reject){
+            if(API.POKEBALLS) return resolve(API.POKEBALLS);
+
+            getJSON('/api/pokeballs', function(data){
+                API.POKEBALLS = data;
+                resolve(data)
+            });
+        });
+    },
+    get_encounters: function(){
+        return new Promise(function(resolve, reject){
+            if(API.ENCOUNTER_OPTIONS) return resolve(API.ENCOUNTER_OPTIONS);
+
+            getJSON('/api/encounters', function(data){
+                API.ENCOUNTER_OPTIONS = data;
+                resolve(data)
+            });
+        });
+    },
     prepare: function(){
         return Promise.all([
             API.get_natures(),
             API.get_items(),
             API.get_languages(),
-            API.get_hometowns()
-        ]);
+            API.get_hometowns(),
+            API.get_locations(),
+            API.get_encounters()
+        ]).then(API.get_pokeballs);
     },
     NATURES: null,
     ITEMS: null,
+    POKEBALLS: null,
     LANGUAGES: null,
-    HOMETOWNS: null
+    HOMETOWNS: null,
+    LOCATIONS: null,
+    ENCOUNTER_OPTIONS: null
 };

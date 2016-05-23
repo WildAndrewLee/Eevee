@@ -4,11 +4,11 @@
         <title>Pokémon Generator</title>
         <link href='//fonts.googleapis.com/css?family=Press+Start+2P|PT+Sans' rel='stylesheet' type='text/css'>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="/css/style.css" rel="stylesheet" />
+        <link href="/css/bundle.min.css" rel="stylesheet" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="/js/eevee.min.js"></script>
     </head>
-    <body>
+    <body class="wrapper">
         <aside id="progress"></aside>
         <aside id="loading">
             <div>
@@ -20,8 +20,13 @@
             </div>
         </aside>
         <header>
-            <h1>Pokémon Generator</h1>
+            <div class="wrapper">
+                <h1>Pokémon Generator</h1>
+            </div>
         </header>
+        <div id="search">
+            <input id="search-input" type="text" placeholder="Search" />
+        </div>
         <aside id="thumbnails">
 
         </aside>

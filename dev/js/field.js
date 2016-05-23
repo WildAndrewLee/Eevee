@@ -50,6 +50,14 @@ FieldTemplate.prototype.render = function(){
     );
 };
 
+FieldTemplate.prototype.disable = function(){
+    this.field.disable();
+};
+
+FieldTemplate.prototype.enable = function(){
+    this.field.enable();
+};
+
 function TextField(options){
     FieldTemplate.call(this, options);
     this.field = $('<input>');
@@ -137,10 +145,6 @@ function CheckField(options){
     FieldTemplate.call(this, options);
     this.field = $('<input>');
     this.checked = options.checked || false;
-
-    this.change(function(v){
-        this.value = $(this.field).val();
-    });
 }
 
 CheckField.prototype = new FieldTemplate();
@@ -152,9 +156,40 @@ CheckField.prototype.render = function(){
         disabled: this.disabled
     });
 
-    return FieldTemplate.prototype.render.call(this).append(
-        $('<div>').addClass('check-group').append(this.field)
-    ).wrap('<div class="input-wrapper"></div>').parent();
+    return FieldTemplate.prototype.render.call(this)
+        .append(
+            $(this.field).wrap('<div class="check-group"></div>').parent()
+        )
+        .wrap('<div class="input-wrapper"></div>').parent();
+};
+
+CheckField.prototype.change = function(fn){
+    var that = this;
+
+    $(this.field).change(function(){
+        fn.call(that, $(this).prop('checked'));
+    });
+
+    return this;
+};
+
+function DateField(options){
+    FieldTemplate.call(this, options);
+    this.field = $('<input>');
+}
+
+DateField.prototype = new FieldTemplate();
+
+DateField.prototype.render = function(){
+    this.field.attr({
+        type: 'date',
+        disabled: this.disabled,
+        value: this.value
+    });
+
+    return FieldTemplate.prototype.render.call(this)
+        .append(this.field)
+        .wrap('<div class="input-wrapper"></div>').parent();
 };
 
 function Field(options){
@@ -170,17 +205,20 @@ function Field(options){
         }
     });
 
-    if(options.type == 'text'){
+    if(options.type === 'text'){
         return new TextField(options);
     }
-    else if(options.type == 'select'){
+    else if(options.type === 'select'){
         return new SelectField(options);
     }
-    else if(options.type == 'number'){
+    else if(options.type === 'number'){
         return new NumberField(options);
     }
-    else if(options.type == 'check'){
+    else if(options.type === 'check'){
         return new CheckField(options);
+    }
+    else if(options.type === 'date'){
+        return new DateField(options);
     }
     else{
         return null;
