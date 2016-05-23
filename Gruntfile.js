@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		uglify: {
 			everything: {
                 options: {
-                    beautify: true
+                    beautify: false
                 },
 				files: {
                     'static/js/eevee.min.js': [

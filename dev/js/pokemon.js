@@ -37,8 +37,8 @@ function Pokemon(id){
      * Met Info
      */
 
-    this.location = 55; // Pal Park.
-    this.ball = 500; // Park Ball.
+    this.location = 92; // GTS.
+    this.ball = 4; // Park Ball.
     this.met_date = format_date(new Date()); // Today.
     this.met_level = 1;
     this.encounter = 0; // Default to Pal Park/Egg/Special Event.
@@ -369,6 +369,9 @@ Pokemon.prototype.render = function(){
         type: 'check',
         checked: this.met_egg,
         disabled: this.egg
+    }).change(function(v){
+        if(v) that.$egg.disable();
+        else that.$egg.enable();
     });
 
     this.$egg_location = Field({

@@ -37,7 +37,6 @@ FieldTemplate.prototype.change = function(fn){
 FieldTemplate.prototype.val = function(v){
     if(v !== undefined){
         $(this.field).val(v);
-        return this;
     }
     else{
         return $(this.field).val();
