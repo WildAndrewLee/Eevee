@@ -64,7 +64,7 @@ function buff_to_num(buff){
 }
 
 function swap_endian(num){
-    return ((num >> 24) & 0xFF) | (((num >> 16) & 0xFF) << 8) | (((num >> 8) & 0xFF) << 16) | ((num & 0xFF) << 24);
+    return (((num >>> 24) & 0xFF) | (((num >>> 16) & 0xFF) << 8) | (((num >>> 8) & 0xFF) << 16) | ((num & 0xFF) << 24)) >>> 0;
 }
 
 function format_date(date){
@@ -76,4 +76,20 @@ function format_date(date){
     if(month.length < 2) month = '0' + month;
 
     return year + '-' + month + '-' + day;
+}
+
+function left_pad(str, len, char){
+    while(str.length < len) str = char + str;
+    return str;
+}
+
+function to_binary_str(num){
+    var str = '';
+
+    while(num !== 0){
+        str = (num & 0x1) + str;
+        num = num >> 1;
+    }
+
+    return str;
 }

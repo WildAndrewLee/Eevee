@@ -90,10 +90,14 @@ function Pokemon(id){
     /**
      * Misc
      */
+
+    this.trainer_gender = Pokemon.MALE;
+    this.trainer_id_pub = 12345;
+    this.trainer_id_secret = 12345;
 }
 
-Pokemon.MALE = 0x2; // Leave last bit as 0 for ability.
-Pokemon.FEMALE = 0xFC; // Leave last bit as 0 for ability.
+Pokemon.MALE = 0xC0; // Leave last bit as 0 for ability.
+Pokemon.FEMALE = 0x2; // Leave last bit as 0 for ability.
 Pokemon.GENDERLESS = 0xFF;
 Pokemon.MALE_ONLY = 0x0;
 Pokemon.FEMALE_ONLY = 0xFE;
@@ -155,6 +159,65 @@ Pokemon.prototype.only_male = function(){
 
 Pokemon.prototype.only_female = function(){
     return !this.valid_gender.male && this.valid_gender.female;
+};
+
+Pokemon.prototype.apply = function(){
+    this.nickname = this.$nickname.val();
+    this.nature = this.$nature.val();
+    this.ability = JSON.parse(this.$ability.val());
+    this.level = this.$level.val();
+    this.exp = this.$exp.val();
+    this.held_item = this.$held.val();
+    this.happiness = this.$happiness.val();
+    this.form = this.$form.val();
+    this.lang = this.$lang.val();
+    this.origin = this.$origin.val();
+    this.gender = this.$gender.val();
+    this.egg = this.$egg.check();
+    this.shiny = this.$shiny.check();
+    this.pokerus1 = this.$pokerus1.val();
+    this.pokerus2 = this.$pokerus2.val();
+    this.location = this.$location.val();
+    this.ball = this.$ball.val();
+    this.met_level = this.$met_level.val();
+    this.met_date = this.$met_date.val();
+    this.encounter = this.$encounter.val();
+    this.fateful_encounter = this.$fateful_encounter.val();
+    this.met_egg = this.$met_egg.check();
+    this.egg_location = this.$egg_location.val();
+    this.egg_date = this.$egg_date.val();
+
+    this.iv = {
+        hp: this.$hp_iv.val(),
+        att: this.$att_iv.val(),
+        def: this.$def_iv.val(),
+        special_att: this.$special_att_iv.val(),
+        special_def: this.$special_def_iv.val(),
+        spd: this.$spd_iv.val()
+    };
+
+    this.ev = {
+        hp: this.$hp_ev.val(),
+        att: this.$att_ev.val(),
+        def: this.$def_ev.val(),
+        special_att: this.$special_att_ev.val(),
+        special_def: this.$special_def_ev.val(),
+        spd: this.$spd_ev.val()
+    };
+
+    this.move1 = this.$move1.val();
+    this.move2 = this.$move2.val();
+    this.move3 = this.$move3.val();
+    this.move4 = this.$move4.val();
+
+    this.ppup1 = this.$ppup1.val();
+    this.ppup2 = this.$ppup2.val();
+    this.ppup3 = this.$ppup3.val();
+    this.ppup4 = this.$ppup4.val();
+
+    this.trainer_gender = this.$trainer_gender.val();
+    this.trainer_id_pub = this.$trainer_id_pub.val();
+    this.trainer_id_secret = this.$trainer_id_secret.val();
 };
 
 Pokemon.prototype.render = function(){
@@ -295,8 +358,7 @@ Pokemon.prototype.render = function(){
     this.$shiny = Field({
         label: 'Shiny',
         type: 'check',
-        checked: this.shiny,
-        disabled: true
+        checked: this.shiny
     });
 
     this.$pokerus1 = Field({
@@ -661,6 +723,44 @@ Pokemon.prototype.render = function(){
                         );
 
     /**
+     * Misc DOM Elements
+     */
+
+    this.$trainer_gender = Field({
+        label: 'Trainer Gender',
+        type: 'select',
+        options: [
+            [Pokemon.MALE, 'Male'],
+            [Pokemon.FEMALE, 'Female']
+        ],
+        selected: this.trainer_gender
+    });
+
+    this.$trainer_id_pub = Field({
+        label: 'Public Trainer ID',
+        type: 'number',
+        min: 0,
+        max: 65535,
+        value: this.trainer_id_pub
+    });
+
+    this.$trainer_id_secret = Field({
+        label: 'Secret Trainer ID',
+        type: 'number',
+        min: 0,
+        max: 65535,
+        value: this.trainer_id_secret
+    });
+
+    var $misc_fields = $('<aside>').addClass('fields moves')
+                        .append(this.$trainer_gender.render())
+                        .append(
+                            $('<div>').addClass('input-grouped')
+                                .append(this.$trainer_id_pub.render())
+                                .append(this.$trainer_id_secret.render())
+                        );
+
+    /**
      * General Editor
      */
 
@@ -702,13 +802,21 @@ Pokemon.prototype.render = function(){
                     $(this).addClass('selected');
                 })
         ).append(
-            $('<span>').addClass('ribbons-button').text('Ribbons')
-        ).append(
             $('<span>').addClass('misc-button').text('Misc')
+                .click(function(){
+                    that.$editor.find('.fields').hide();
+                    $misc_fields.show();
+
+                    that.$editor.find('nav span').removeClass('selected');
+                    $(this).addClass('selected');
+                })
         ).append(
             $('<span>').addClass('choose-again-button').text('Start Over').click(eevee.reset)
         ).append(
-            $('<span>').addClass('save-button').text('Save')
+            $('<span>').addClass('save-button').text('Save').click(function(){
+                that.apply();
+                eevee.save(that);
+            })
         )
     ).append(
         $('<aside>').addClass('row').append(
@@ -718,6 +826,7 @@ Pokemon.prototype.render = function(){
         .append($met_fields)
         .append($stat_fields)
         .append($move_fields)
+        .append($misc_fields)
     );
 
     return this.$editor;
