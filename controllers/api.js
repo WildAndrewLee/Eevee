@@ -280,6 +280,38 @@ function get_encounters(){
     })
 }
 
+function get_character_encodings(str){
+    return new Promise((resolve, reject) => {
+        db.query('SELECT * FROM characters WHERE CAST(c AS BINARY) IN (?)', [str.split('')], (err, rows) => {
+            if(err) return reject(err);
+
+            var r = {};
+
+            rows.forEach((row) => {
+                r[row.c] = row.repr;
+            });
+
+            resolve(r);
+        });
+    });
+}
+
+function get_all_encodings(str){
+    return new Promise((resolve, reject) => {
+        db.query('SELECT * FROM characters', (err, rows) => {
+            if(err) return reject(err);
+
+            var r = {};
+
+            rows.forEach((row) => {
+                r[row.c] = row.repr;
+            });
+
+            resolve(r);
+        });
+    });
+}
+
 // Because Express is stupid.
 function wrapper(res){
     return function(j){
@@ -351,6 +383,15 @@ router.get('/pokeballs', (req, res) => {
 
 router.get('/encounters', (req, res) => {
     get_encounters().then(wrapper(res), err_handler(res));
+});
+
+router.get('/encoding/:str?', (req, res) => {
+    if(req.params.str){
+        get_character_encodings(req.params.str).then(wrapper(res), err_handler(res));
+    }
+    else{
+        get_all_encodings().then(wrapper(res), err_handler(res));
+    }
 });
 
 router.get('/pokemon/:pokemon_id', (req, res) => {

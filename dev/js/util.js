@@ -23,31 +23,42 @@ function alpha_order_options(options){
 }
 
 function show_progress(p){
-    if(p === 100) return $('#progress').width(0).hide();
-    $('#progress').css('width', p + '%').show();
+    $('#progress').show();
+
+    if(p === 100){
+        return $('#progress').css('width', '100%').animate({
+            opacity: 0
+        }, 500, function(){
+            $(this).width(0).hide();
+        });
+    }
+    else{
+        $('#progress').css({
+            opacity: 1.0,
+            width: p + '%'
+        });
+    }
 }
 
-function getJSON(url, fn, fail){
-    show_progress(0);
-
+function getJSON(url, fn, progress){
     $.ajax({
         dataType: 'json',
         xhr: function(){
             var xhr = new XMLHttpRequest();
 
-            xhr.addEventListener('progress', function(e){
-                var percent = e.loaded / e.total;
-                show_progress(percent * 100);
-            });
+            if(progress === true){
+                xhr.addEventListener('progress', function(e){
+                    var percent = e.loaded / e.total;
+                    show_progress(percent * 100);
+                    console.log(e.loaded + '/' + e.total);
+                });
+            }
 
             return xhr;
         },
         success: function(data){
-            show_progress(100);
+            if(progress) show_progress(100);
             fn(data);
-        },
-        fail: function(){
-            if(fail) fail();
         },
         url: url
     });

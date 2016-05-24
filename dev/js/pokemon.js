@@ -41,7 +41,7 @@ function Pokemon(id){
     this.ball = 4; // Park Ball.
     this.met_date = format_date(new Date()); // Today.
     this.met_level = 1;
-    this.encounter = 0; // Default to Pal Park/Egg/Special Event.
+    this.encounter = 9; // Default to Building for GTS (I think).
     this.fateful_encounter = false;
     this.met_egg = false;
     this.egg_location = 126; // New Bark Town.
@@ -91,6 +91,7 @@ function Pokemon(id){
      * Misc
      */
 
+    this.trainer_name = null;
     this.trainer_gender = Pokemon.MALE;
     this.trainer_id_pub = 12345;
     this.trainer_id_secret = 12345;
@@ -215,6 +216,7 @@ Pokemon.prototype.apply = function(){
     this.ppup3 = this.$ppup3.val();
     this.ppup4 = this.$ppup4.val();
 
+    this.trainer_name = this.$trainer_name.val();
     this.trainer_gender = this.$trainer_gender.val();
     this.trainer_id_pub = this.$trainer_id_pub.val();
     this.trainer_id_secret = this.$trainer_id_secret.val();
@@ -259,7 +261,8 @@ Pokemon.prototype.render = function(){
 
     this.$nickname = Field({
         label: 'Nickname',
-        value: this.nickname
+        value: this.nickname,
+        maxlength: 11
     });
 
     this.$nature = Field({
@@ -726,6 +729,13 @@ Pokemon.prototype.render = function(){
      * Misc DOM Elements
      */
 
+    this.$trainer_name = Field({
+        label: 'Trainer Name',
+        type: 'text',
+        maxlength: 8,
+        value: this.trainer_name
+    });
+
     this.$trainer_gender = Field({
         label: 'Trainer Gender',
         type: 'select',
@@ -752,7 +762,8 @@ Pokemon.prototype.render = function(){
         value: this.trainer_id_secret
     });
 
-    var $misc_fields = $('<aside>').addClass('fields moves')
+    var $misc_fields = $('<aside>').addClass('fields misc')
+                        .append(this.$trainer_name.render())
                         .append(this.$trainer_gender.render())
                         .append(
                             $('<div>').addClass('input-grouped')

@@ -64,7 +64,7 @@ var eevee = {
         // BLOCK A
 
         view.setUint16(0x8, poke.id, true);
-        view.setUint16(0xA, poke.item, true);
+        view.setUint16(0xA, poke.held_item, true);
         view.setUint16(0xC, poke.trainer_id_pub, true);
         view.setUint16(0xE, poke.trainer_id_secret, true);
         view.setUint32(0x10, poke.exp, true);
@@ -117,7 +117,7 @@ var eevee = {
         met_data |= poke.fateful_encounter;
         met_data |= (poke.gender === Pokemon.FEMALE) << 1;
         met_data |= poke.is_genderless() << 2;
-        met_data |= poke.form << 3 >> 0;
+        met_data |= poke.form << 3;
 
         view.setUint8(0x40, met_data);
 
@@ -128,39 +128,82 @@ var eevee = {
             view.setUint16(0x46, poke.location, true);
         }
 
-        var out = new Uint8Array(buffer);
-        var hex = '';
-        var alphabet = '0123456789ABCDEF';
-        var pack_length = 0;
-        var packs = 0;
+        // BLOCK C
 
-        for(n = 0; n < out.length; n++){
-            if(pack_length === 4){
-                pack_length = 0;
-                packs++;
+        var chars = (poke.nickname || poke.name).split('');
+        var ordinals = [];
 
-                if(packs !== 8){
-                    hex += ' ';
-                }
-            }
+        chars.forEach(function(c){
+            if(API.ENCODINGS[c]) ordinals.push(API.ENCODINGS[c]);
+        });
 
-            if(packs === 8){
-                hex += '\n';
-                pack_length = 0;
-                packs = 0;
-            }
+        ordinals.forEach(function(o, i){
+            view.setUint16(0x48 + (i * 2), o, true);
+        });
 
-            hex += alphabet.charAt(out[n] >> 4);
-            hex += alphabet.charAt(out[n] & 0xF);
+        view.setUint16(0x48 + ordinals.length * 2, 0xFFFF, true);
 
-            pack_length += 2;
+        for(n = ordinals.length; n < 11; n++){
+            view.setUint16(0x48 + n * 2 + 2 /* for 0xFFFF block */, 0x0, true);
         }
 
-        console.log(hex);
+        view.setUint8(0x5F, poke.origin);
 
-        /**
-         * Generate PID.
-         */
+        // BLOCK D
+
+        chars = poke.trainer_name.split('');
+        ordinals = [];
+
+        chars.forEach(function(c){
+            if(API.ENCODINGS[c]) ordinals.push(API.ENCODINGS[c]);
+        });
+
+        ordinals.forEach(function(o, i){
+            view.setUint16(0x68 + (i * 2), o, true);
+        });
+
+        view.setUint16(0x68 + ordinals.length * 2, 0xFFFF, true);
+
+        for(n = ordinals.length; n < 8; n++){
+            view.setUint16(0x68 + n * 2 + 2 /* for 0xFFFF block */, 0x0, true);
+        }
+
+        var d;
+
+        if(poke.met_egg){
+            d = new Date(poke.egg_date);
+            view.setUint8(0x78, d.getFullYear() % 100);
+            view.setUint8(0x79, d.getMonth() + 1);
+            view.setUint8(0x7A, d.getDate());
+            view.setUint16(0x7E, poke.egg_location, true);
+        }
+        else{
+            d = new Date(poke.met_date);
+            view.setUint8(0x7B, d.getFullYear() % 100);
+            view.setUint8(0x7C, d.getMonth() + 1);
+            view.setUint8(0x7D, d.getDate());
+            view.setUint16(0x80, poke.location, true);
+        }
+
+        var pokerus = ((0x0 | poke.pokerus1) << 4) | poke.pokerus2;
+
+        view.setUint8(0x82, pokerus);
+        view.setUint8(0x83, poke.ball);
+
+        var more_meta = 0;
+        more_meta |= poke.met_level;
+        more_meta |= (poke.trainer_gender === Pokemon.FEMALE) << 7;
+
+        view.setUint8(0x84, more_meta);
+        view.setUint8(0x85, poke.encounter);
+        view.setUint8(0x86, poke.ball);
+
+        // CHECKSUM
+
+        var checksum = crypt.checksum(buffer.slice(0x8));
+        view.setUint16(0x6, checksum, true);
+
+        // PID
 
         var PID = 0;
 
@@ -205,6 +248,33 @@ var eevee = {
             }
         }
 
-        console.log(PID);
+        view.setUint32(0x0, PID, true);
+
+        /**
+         * DONE WITH BUFFER CREATION
+         */
+
+        var out = new Uint8Array(buffer);
+        var hex = '';
+        var alphabet = '0123456789ABCDEF';
+
+        for(n = 0; n < out.length; n++){
+            hex += alphabet.charAt(out[n] >> 4);
+            hex += alphabet.charAt(out[n] & 0xF);
+        }
+
+        console.log(hex);
+
+        var download = new Blob([buffer], {type: 'octet/stream'});
+        var link = URL.createObjectURL(download);
+        var anchor = document.createElement('a');
+        anchor.download = poke.name + '.pkm';
+        anchor.href = link;
+
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+
+        URL.revokeObjectURL(link);
     }
 };

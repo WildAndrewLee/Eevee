@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var secrets = fs.readFileSync('C:/cygwin64/pokemon/secrets.json');
+var secrets = fs.readFileSync('/pokemon/secrets.json');
 secrets = JSON.parse(secrets);
 
 module.exports = {

@@ -19,7 +19,7 @@ module.exports = function(grunt) {
                         'dev/js/jquery.disable.js',
                         'dev/js/util.js',
                         'dev/js/rng.js',
-                        'dev/js/crypto.js',
+                        'dev/js/crypt.js',
                         'dev/js/cache.js',
                         'dev/js/api.js',
                         'dev/js/field.js',

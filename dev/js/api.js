@@ -6,7 +6,7 @@ var API = {
     },
     get_pokemon_info: function(id){
         return new Promise(function(resolve, reject){
-            getJSON('/api/pokemon/' + id, resolve);
+            getJSON('/api/pokemon/' + id, resolve, true);
         });
     },
     get_natures: function(){
@@ -79,6 +79,16 @@ var API = {
             });
         });
     },
+    get_encodings: function(){
+        return new Promise(function(resolve, reject){
+            if(API.ENCODINGS) return resolve(API.ENCODINGS);
+
+            getJSON('/api/encoding/', function(data){
+                API.ENCODINGS = data;
+                resolve(data);
+            });
+        });
+    },
     prepare: function(){
         return Promise.all([
             API.get_natures(),
@@ -86,7 +96,8 @@ var API = {
             API.get_languages(),
             API.get_hometowns(),
             API.get_locations(),
-            API.get_encounters()
+            API.get_encounters(),
+            API.get_encodings()
         ]).then(API.get_pokeballs);
     },
     NATURES: null,
@@ -95,5 +106,6 @@ var API = {
     LANGUAGES: null,
     HOMETOWNS: null,
     LOCATIONS: null,
-    ENCOUNTER_OPTIONS: null
+    ENCOUNTER_OPTIONS: null,
+    ENCODINGS: null
 };

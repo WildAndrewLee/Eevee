@@ -6,6 +6,7 @@ function FieldTemplate(options){
     this.placeholder = options.placeholder;
     this._validators = [];
     this.disabled = options.disabled || false;
+    this.maxlength = options.maxlength || null;
     this.field = null;
 }
 
@@ -69,7 +70,8 @@ TextField.prototype.render = function(){
         type: 'text',
         disabled: this.disabled,
         placeholder: this.placeholder,
-        value: this.value
+        value: this.value,
+        maxlength: this.maxlength
     });
 
     return FieldTemplate.prototype.render.call(this)
