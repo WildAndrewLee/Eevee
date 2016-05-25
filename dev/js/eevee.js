@@ -258,24 +258,11 @@ var eevee = {
             }
         }
 
-        console.log(PID);
-
         view.setUint32(0x0, PID, true);
 
         /**
          * DONE WITH BUFFER CREATION
          */
-
-        var out = new Uint8Array(buffer);
-        var hex = '';
-        var alphabet = '0123456789ABCDEF';
-
-        for(n = 0; n < out.length; n++){
-            hex += alphabet.charAt(out[n] >> 4);
-            hex += alphabet.charAt(out[n] & 0xF);
-        }
-
-        console.log(hex);
 
         var download = new Blob([buffer], {type: 'octet/stream'});
         var link = URL.createObjectURL(download);
