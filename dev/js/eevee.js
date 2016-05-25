@@ -68,7 +68,7 @@ var eevee = {
         view.setUint16(0xC, poke.trainer_id_pub, true);
         view.setUint16(0xE, poke.trainer_id_secret, true);
         view.setUint32(0x10, poke.exp, true);
-        view.setUint8(0x14, poke.friendship);
+        view.setUint8(0x14, poke.happiness);
         view.setUint8(0x15, poke.ability.id);
         view.setUint8(0x17, poke.lang);
         view.setUint8(0x18, poke.ev.hp);
@@ -122,7 +122,8 @@ var eevee = {
         view.setUint8(0x40, met_data);
 
         if(poke.met_egg){
-            view.setUint16(0x44, poke.egg_location, true);
+            view.setUint16(0x44, poke.location, true);
+            view.setUint16(0x46, poke.egg_location, true);
         }
         else{
             view.setUint16(0x46, poke.location, true);
@@ -171,11 +172,21 @@ var eevee = {
         var d;
 
         if(poke.met_egg){
+            // Date Received Egg
+            d = new Date(poke.met_date);
+
+            view.setUint8(0x7B, d.getFullYear() % 100);
+            view.setUint8(0x7C, d.getMonth() + 1);
+            view.setUint8(0x7D, d.getDate());
+            view.setUint16(0x7E, poke.location, true);
+
+            // Date of Hatch
             d = new Date(poke.egg_date);
+
             view.setUint8(0x78, d.getFullYear() % 100);
             view.setUint8(0x79, d.getMonth() + 1);
             view.setUint8(0x7A, d.getDate());
-            view.setUint16(0x7E, poke.egg_location, true);
+            view.setUint16(0x80, poke.egg_location, true);
         }
         else{
             d = new Date(poke.met_date);
@@ -227,17 +238,16 @@ var eevee = {
         }
 
         // Pokemon shininess.
-        function is_shiny(p1, p2){
+        function is_shiny(pid){
+            var p1 = pid & 0xFF00 >> 16;
+            var p2 = pid & 0xFF;
+
             var s = poke.trainer_id_pub ^ poke.trainer_id_secret ^ p1 ^ p2;
+
             return s < 8;
         }
 
-        for(n = new Uint32Array([0]); n[0] < 65535; n[0]++){
-            if(is_shiny(n[0], PID) === poke.shiny){
-                PID |= n[0] << 16;
-                break;
-            }
-        }
+        while(PID < 65535 && is_shiny(PID) !== poke.shiny) PID += 25;
 
         // Pokemon ability.
         if(!poke.is_genderless()){
@@ -247,6 +257,8 @@ var eevee = {
                 PID += 25;
             }
         }
+
+        console.log(PID);
 
         view.setUint32(0x0, PID, true);
 

@@ -94,7 +94,7 @@ function Pokemon(id){
     this.trainer_name = null;
     this.trainer_gender = Pokemon.MALE;
     this.trainer_id_pub = 12345;
-    this.trainer_id_secret = 12345;
+    this.trainer_id_secret = 54321;
 }
 
 Pokemon.MALE = 0xC0; // Leave last bit as 0 for ability.
@@ -361,7 +361,8 @@ Pokemon.prototype.render = function(){
     this.$shiny = Field({
         label: 'Shiny',
         type: 'check',
-        checked: this.shiny
+        checked: this.shiny,
+        disabled: true
     });
 
     this.$pokerus1 = Field({
