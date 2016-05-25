@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/about', (req, res) => {
+    res.render('about');
+});
+
 app.use((err, req, res, next) => {
     if(err) throw err;
     next();

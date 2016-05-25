@@ -52,9 +52,29 @@ body > header {
     padding-bottom: 0.5em;
 }
 
+body > header > .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body > header nav a {
+    display: inline-block;
+    color: #ffffff;
+    background: #5764c6;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
+body > header nav a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #3b49af;
+}
+
 body > header h1 {
     border: none;
-    display: inline-block
+    display: inline-block;
 }
 
 figure {
