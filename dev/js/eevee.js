@@ -82,17 +82,15 @@ var eevee = {
 
         // BLOCK B
 
-        view.setUint16(0x28, poke.move1, true);
-        view.setUint16(0x2A, poke.move2, true);
-        view.setUint16(0x2C, poke.move3, true);
-        view.setUint16(0x2E, poke.move4, true);
+        view.setUint16(0x28, poke.move1.id, true);
+        view.setUint16(0x2A, poke.move2.id, true);
+        view.setUint16(0x2C, poke.move3.id, true);
+        view.setUint16(0x2E, poke.move4.id, true);
 
-        // TODO: Put PP values in database.
-
-        view.setUint8(0x30, 0);
-        view.setUint8(0x31, 0);
-        view.setUint8(0x32, 0);
-        view.setUint8(0x33, 0);
+        view.setUint8(0x30, poke.move1.pp);
+        view.setUint8(0x31, poke.move2.pp);
+        view.setUint8(0x32, poke.move3.pp);
+        view.setUint8(0x33, poke.move4.pp);
 
         view.setUint8(0x34, poke.ppup1);
         view.setUint8(0x35, poke.ppup2);

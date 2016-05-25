@@ -61,7 +61,10 @@ function get_moves(id){
             var r = {};
 
             rows.forEach((row) => {
-                r[row.name] = row.id;
+                r[row.name] = {
+                    id: row.id,
+                    pp: row.pp
+                };
             });
 
             resolve(r);

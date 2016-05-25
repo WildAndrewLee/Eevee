@@ -1,8 +1,3 @@
-/*
-A JavaScript port of some
-pkmcrypto functions (https://github.com/ceol/pkmcrypto/blob/master/crypto.py)
- */
-
 var crypt = {
     checksum: function(data){
         var checksum = 0;

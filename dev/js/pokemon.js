@@ -206,10 +206,10 @@ Pokemon.prototype.apply = function(){
         spd: this.$spd_ev.val()
     };
 
-    this.move1 = this.$move1.val();
-    this.move2 = this.$move2.val();
-    this.move3 = this.$move3.val();
-    this.move4 = this.$move4.val();
+    this.move1 = JSON.parse(this.$move1.val());
+    this.move2 = JSON.parse(this.$move2.val());
+    this.move3 = JSON.parse(this.$move3.val());
+    this.move4 = JSON.parse(this.$move4.val());
 
     this.ppup1 = this.$ppup1.val();
     this.ppup2 = this.$ppup2.val();
