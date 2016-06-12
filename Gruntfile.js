@@ -1,19 +1,19 @@
 module.exports = function(grunt) {
-	var grunt_options = {
-		jshint: {
-			files: ['dev/js/*.js'],
-			options: {
-				globals: {
-					jQuery: true
-				}
-			}
-		},
-		uglify: {
-			everything: {
+    var grunt_options = {
+        jshint: {
+            files: ['dev/js/*.js'],
+            options: {
+                globals: {
+                    jQuery: true
+                }
+            }
+        },
+        uglify: {
+            everything: {
                 options: {
                     beautify: false
                 },
-				files: {
+                files: {
                     'static/js/eevee.min.js': [
                         'dev/js/lib/*.js',
                         'dev/js/jquery.disable.js',
@@ -27,9 +27,9 @@ module.exports = function(grunt) {
                         'dev/js/eevee.js',
                         'dev/js/script.js'
                     ]
-				}
-			}
-		},
+                }
+            }
+        },
         cssmin: {
             everything: {
                 files: {
@@ -37,24 +37,24 @@ module.exports = function(grunt) {
                 }
             }
         },
-		watch: {
-			js: {
-				files: 'dev/js/*.js',
-				tasks: ['jshint', 'uglify']
-			},
+        watch: {
+            js: {
+                files: 'dev/js/*.js',
+                tasks: ['jshint', 'uglify']
+            },
             css: {
                 files: 'dev/css/*.css',
                 tasks: ['cssmin']
             }
-		}
-	};
+        }
+    };
 
-	grunt.initConfig(grunt_options);
+    grunt.initConfig(grunt_options);
 
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
 };
